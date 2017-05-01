@@ -1,18 +1,18 @@
-repository: Swanfield/chambermanual
+repository: Swanfield/manuals
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: MSTCL Oxygen Chamber Manual
+topnav_title: MS Therapy Centre Lothian Manuals
 # this appears on the top navigation bar next to the home button
 
-site_title: MSTCL Oxygen Chamber Manual
+site_title: MS Therapy Centre Lothian Manuals
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: MS Therapy Centre Lothian
 # this appears in the footer
 
-github_editme_path: Swanfield/chambermanual/blob/gh-pages/
+github_editme_path: Swanfield/manuals/blob/gh-pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: 
@@ -29,7 +29,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: MSTCL Oxygen Chamber Manual
+feedback_subject_line: MS Therapy Centre Lothian Manuals
 
 feedback_email: Swanfield@github.com
 # used as a contact email for the Feedback link in the top navigation bar
