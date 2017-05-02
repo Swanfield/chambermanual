@@ -1,0 +1,75 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: MS Therapy Centre Manuals
+  version: 0.1
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+
+    - title: Theme Documentation
+      url: /theme_index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Release Notes
+      output: web, pdf
+      url: /theme_release_notes_60.html
+
+    - title: Installation
+      url: /theme_about_ruby_gems_etc.html
+      output: web, pdf
+
+    - title: Authoring
+      url: /theme_pages.html
+      output: web, pdf
+
+    - title: Navigation
+      url: /theme_sidebar_navigation.html
+      output: web, pdf
+
+    - title: Formatting
+      url: /theme_adding_tooltips.html
+      output: web, pdf
+
+    - title: Publishing
+      url: /theme_build_arguments.html
+      output: web, pdf
+
+    - title: Special layouts
+      url: /theme_kb_layout.html
+      output: web, pdf
+
+    - title: Troubleshooting
+      url: /theme_troubleshooting.html
+      output: web, pdf
+
+    - title: Tag archives
+      url: /theme_tag_archives_overview.html
+      output: web
+
+  - title: Product 1
+    url: /p1_landing_page.html
+    output: web, pdf
+    type: homepage
+
+  - title: Product 2
+    url: /p2_landing_page.html
+    output: web, pdf
+    type: homepage

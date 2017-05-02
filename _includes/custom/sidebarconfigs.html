@@ -1,7 +1,4 @@
-{% if page.sidebar == "home_sidebar" %}
-{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-
-{% elsif page.sidebar == "product1_sidebar" %}
+{% if page.sidebar == "product1_sidebar" %}
 {% assign sidebar = site.data.sidebars.product1_sidebar.entries %}
 
 {% elsif page.sidebar == "product2_sidebar" %}
@@ -9,6 +6,15 @@
 
 {% elsif page.sidebar == "mydoc_sidebar" %}
 {% assign sidebar = site.data.sidebars.mydoc_sidebar.entries %}
+
+{% elsif page.sidebar == "intro_sidebar" %}
+{% assign sidebar = site.data.sidebars.intro_sidebar.entries %}
+
+{% elsif page.sidebar == "theme_sidebar" %}
+{% assign sidebar = site.data.sidebars.theme_sidebar.entries %}
+
+{% elsif page.sidebar == "home_sidebar" %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
 
 {% else %}
 {% assign sidebar = site.data.sidebars.home_sidebar.entries %}
