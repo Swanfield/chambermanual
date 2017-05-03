@@ -182,6 +182,17 @@
 
 
 {
+"title": "Getting started with the Documentation Theme for Jekyll",
+"tags": "getting_started",
+"keywords": "sample homepage",
+"url": "mydoc_get_started.html",
+"summary": "These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll."
+}
+,
+
+
+
+{
 "title": "Glossary layout",
 "tags": "formattingspecial_layouts",
 "keywords": "definitions, glossaries, terms, style guide",
