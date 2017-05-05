@@ -24,6 +24,8 @@ topnav_dropdowns:
           external_url: http://idratherbewriting.com/category-jekyll/
     - title: Products
       folderitems:
+        - title: Chamber Manual
+          url: /m4c_introduction.html
         - title: Theme Documentation
           url: /theme_introduction.html
         - title: Original Theme Documentation

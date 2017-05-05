@@ -1,3 +1,6 @@
+{% if page.sidebar == "m4c_sidebar" %}
+{% assign sidebar = site.data.sidebars.m4c_sidebar.entries %}
+
 {% if page.sidebar == "product1_sidebar" %}
 {% assign sidebar = site.data.sidebars.product1_sidebar.entries %}
 
@@ -28,6 +31,11 @@ sidebar configuration for print files
 
 {% if site.product == "theme" %}
 {% assign sidebar_pdf = site.data.sidebars.mydoc_sidebar.entries %}
+{% endif %}
+
+
+{% if site.product == "m4c" %}
+{% assign sidebar_pdf = site.data.sidebars.m4c_sidebar.entries %}
 {% endif %}
 
 {% if site.product == "mydoc" %}
