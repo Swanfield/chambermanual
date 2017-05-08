@@ -53,7 +53,7 @@ This Valve has been designed by National Vulcan and is very successful relief va
 The Sprinkler Head is mounted in the centre of the dishend inside the chamber. In the event of a chamber fire the water discharged via this head will strike the chamber wall approx 2" above the weld seam, all the patients would be soaked to the skin in approx 10 seconds. 
 
 ---
-title: Introduction
+title: The Chamber
 sidebar: m4c_sidebar
 permalink: m4c_the_chamber.html
 folder: chamber_manual

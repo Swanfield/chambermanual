@@ -27,6 +27,14 @@ entries:
       url: /m4c_introduction.html
       output: web, pdf
 
+    - title: The Oxygen System
+      url: /m4c_the_oxygen_system.html
+      output: web, pdf
+
+    - title: The Compressor and Air System
+      url: /m4c_compressor_and_air.html
+      output: web, pdf
+
     - title: The Chamber
       url: /m4c_the_chamber.html
       output: web, pdf

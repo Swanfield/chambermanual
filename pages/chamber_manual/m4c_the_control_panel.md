@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: The Control Panel
 sidebar: m4c_sidebar
 permalink: the_control_panel.html
 folder: chamber_manual
