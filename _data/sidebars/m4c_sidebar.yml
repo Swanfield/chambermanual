@@ -23,34 +23,34 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Introduction
-      url: /m4c_introduction.html
-      output: web, pdf
+  - title: Introduction
+    url: /m4c_introduction.html
+    output: web, pdf
 
-    - title: The Oxygen System
-      url: /m4c_the_oxygen_system.html
-      output: web, pdf
+  - title: The Oxygen System
+    url: /m4c_the_oxygen_system.html
+    output: web, pdf
 
-    - title: The Compressor and Air System
-      url: /m4c_compressor_and_air_system.html
-      output: web, pdf
+  - title: The Compressor and Air System
+    url: /m4c_compressor_and_air_system.html
+    output: web, pdf
 
-    - title: The Chamber
-      url: /m4c_the_chamber.html
-      output: web, pdf
+  - title: The Chamber
+    url: /m4c_the_chamber.html
+    output: web, pdf
 
-    - title: Facemasks
-      url: /m4c_facemasks.html
-      output: web, pdf
+  - title: Facemasks
+    url: /m4c_facemasks.html
+    output: web, pdf
 
-    - title: The Control Panel
-      url: /m4c_the_control_panel.html
-      output: web, pdf
+  - title: The Control Panel
+    url: /m4c_the_control_panel.html
+    output: web, pdf
 
-    - title: The Water Deluge System
-      url: /m4c_the_water_deluge_system.html
-      output: web, pdf
+  - title: The Water Deluge System
+    url: /m4c_the_water_deluge_system.html
+    output: web, pdf
 
-    - title: Conclusion
-      url: /m4c_conclusion.html
-      output: web, pdf
+  - title: Conclusion
+    url: /m4c_conclusion.html
+    output: web, pdf

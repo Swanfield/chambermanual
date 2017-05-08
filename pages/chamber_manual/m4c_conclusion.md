@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Conclusion
 sidebar: m4c_sidebar
 permalink: m4c_conclusion.html
 folder: chamber_manual
