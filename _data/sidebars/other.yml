@@ -16,3 +16,6 @@ entries:
 
     - title: Some link bookmark
       url: /mydoc_pages.html#someIdTag
+
+    - title: Jekyll Documentation theme
+      url: /mydoc_introduction.html

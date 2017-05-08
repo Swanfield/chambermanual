@@ -23,14 +23,14 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Introduction
+      url: /theme_introduction.html
+      output: web, pdf
+
     - title: Get started
       url: /theme_index.html
       output: web, pdf
       type: homepage
-
-    - title: Introduction
-      url: /theme_introduction.html
-      output: web, pdf
 
     - title: Supported features
       url: /theme_supported_features.html

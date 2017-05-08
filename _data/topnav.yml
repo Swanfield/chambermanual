@@ -22,7 +22,7 @@ topnav_dropdowns:
           external_url: http://stackoverflow.com/questions/tagged/jekyll
         - title: Jekyll on my blog
           external_url: http://idratherbewriting.com/category-jekyll/
-    - title: Products
+    - title: Documentation
       folderitems:
         - title: Chamber Manual
           url: /m4c_introduction.html
