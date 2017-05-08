@@ -1,3 +1,10 @@
+---
+title: The Chamber
+sidebar: m4c_sidebar
+permalink: m4c_the_chamber.html
+folder: chamber_manual
+---
+
 ## THE CHAMBER.
 
 Manufactured to BS 5500: 1999 Cat 2. with a Design Pressure of 33ft. (2 ats) the Test Pressure of 66ft. (3 ats.)
@@ -51,13 +58,6 @@ This Valve has been designed by National Vulcan and is very successful relief va
 ## The Water Sprinkler Head.
 
 The Sprinkler Head is mounted in the centre of the dishend inside the chamber. In the event of a chamber fire the water discharged via this head will strike the chamber wall approx 2" above the weld seam, all the patients would be soaked to the skin in approx 10 seconds. 
-
----
-title: The Chamber
-sidebar: m4c_sidebar
-permalink: m4c_the_chamber.html
-folder: chamber_manual
----
 
 ## The Internal Lighting.
 

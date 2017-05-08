@@ -32,7 +32,7 @@ entries:
       output: web, pdf
 
     - title: The Compressor and Air System
-      url: /m4c_compressor_and_air.html
+      url: /m4c_compressor_and_air_system.html
       output: web, pdf
 
     - title: The Chamber
