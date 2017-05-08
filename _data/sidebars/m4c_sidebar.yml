@@ -24,6 +24,9 @@ entries:
     folderitems:
 
     - title: Introduction
-      url: /mydoc_introduction.html
+      url: /m4c_introduction.html
       output: web, pdf
 
+    - title: Conclusion
+      url: /m4c_conclusion.html
+      output: web, pdf
