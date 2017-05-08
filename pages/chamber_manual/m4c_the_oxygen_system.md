@@ -1,7 +1,7 @@
 ---
 title: The Oxygen System
 sidebar: m4c_sidebar
-permalink: the_oxygen_system.html
+permalink: m4c_the_oxygen_system.html
 folder: chamber_manual
 ---
 
