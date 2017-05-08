@@ -32,10 +32,6 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: Supported features
-      url: /theme_supported_features.html
-      output: web, pdf
-
     - title: About the theme author
       url: /theme_about.html
       output: web, pdf
