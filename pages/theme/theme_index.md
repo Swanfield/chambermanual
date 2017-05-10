@@ -19,9 +19,12 @@ You will need:
 * Bundler
 * A UTF-8 compatible text editor like [Sublime Text](https://www.sublimetext.com/)
 
+
+
 ## Install The Software
 
 The easiest way to install and manage the software required for this project is to first install [Chocolatey](https://chocolatey.org/).
+
 
 ### Install Chocolatey
 
@@ -29,39 +32,41 @@ The easiest way to install and manage the software required for this project is 
 
 At the time of writing, copy and paste this to the command line:
 
-```
+```shell
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
+
 
 ### Install Ruby for Windows and Ruby Development Kit
 
 At the command line enter:
 
-```
+```shell
 choco install ruby -y
 choco install ruby2.devkit
 ```
 
-### Install Git for Windows
 
+### Install Git for Windows
 
 You can pick anyone of the following or all three:
 
-```
+```shell
 choco install git.install
 choco install tortoisegit 
 choco install github 
 ```
 I have not used [GitHub Desktop] so will not document it here until I have.
 
-### Install Bundler and Jekyll
+
+### Install Bundler
 
 At the command line enter:
 
-```
+```shell
 gem install bundler
-gem install jekyll
 ```
+
 
 ### Install a text editor
 
@@ -69,9 +74,12 @@ Any text editor that can handle UTF-8 encoded text files is recommended (unfortu
 
 Download Sublime Text 3 from here: https://www.sublimetext.com/3
 
+
+
 ## Set up Git
 
 You will need to synchronise your newly installed version of git with GitHub.  I have not used [GitHub Desktop] so will not document it here until I have.  [TortoiseGit] uses the same settings as [Git for Windows].  You can think of it simply as a Windows Explorer add-on for Git.  I will focus on [Git for Windows] as I am most familiar with this but if you really like using your mouse and Windows Explorer then pretty much anything that can be done on the command line with [Git for Windows] can be done with [TortoiseGit].
+
 
 ### Open the Git Shell application
 
@@ -80,32 +88,42 @@ You will need to synchronise your newly installed version of git with GitHub.  I
 1. Select "Git Bash here", and a shell window will open.  This shell window uses Unix/Bash style commands rather than Windows style commands.
 1. Set a Git username:
 
-    ```
+   ```shell
 git config --global user.name "My Name"
-    ```
+   ```
+
 1. Confirm that you have set the Git username correctly:
 
-    ```
+   ```shell
 git config --global user.name
 > My Name
-    ```
-1. Set an email address in Git. To keep your email address private, you can use the address username@users.noreply.github.com, replacing username with your GitHub username.  You will need to [tell GitHub to keep your email address private](https://help.github.com/articles/keeping-your-email-address-private/).
+   ```
 
-    ```
+1. Set an email address in Git. 
+
+   ```shell
 git config --global user.email "email@example.com"
-    ```
+   ```
+
+    To keep your email address private, you can use the address username@users.noreply.github.com, replacing username with your GitHub username.  You will need to [tell GitHub to keep your email address private](https://help.github.com/articles/keeping-your-email-address-private/).
+
 1. Confirm that you have set the email address correctly in Git:
-    ```
+
+   ```shell
 git config --global user.email
 > email@example.com
-    ```
+   ```
+
 1. [Link the email address to your GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/), so that your commits can be attributed to you and displayed in your contributions graph.
+
+
 
 ### Set up authentication with GitHub.
 
 When you download or "clone" a repository from GitHub you need to connect securely and authenticate yourself.  This is done automatically with a protocol called SSH but it still needs to be set up.
 
- If you have GitHub Desktop installed, you can use it to clone repositories and not deal with SSH keys. 
+If you have GitHub Desktop installed, you can use it to clone repositories and not deal with SSH keys. 
+
 
 #### Generate a new SSH key
 
@@ -113,23 +131,26 @@ Generate an SSH public-private keypair on your computer.  You will add the publi
 
 1. Open Git Bash.
 1. Paste the text below, substituting in your GitHub email address.
-   ```
+
+   ```shell
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    ```
-This creates a new ssh key, using the provided email as a label.
 
-   ```
+    This creates a new ssh key, using the provided email as a label.
+
+   ```shell
 Generating public/private rsa key pair.
    ```
+
 1. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
 
-   ```
+   ```shell
 Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]
    ```
 
 1. If other people share your computer with you then, at the prompt, type a secure passphrase. You will need to type in this passphrase everytime you connect to GitHub.  If you are the only person who uses your computer then you can probably leave this blank.
 
-   ```
+   ```shell
 Enter passphrase (empty for no passphrase): [Type a passphrase]
 Enter same passphrase again: [Type passphrase again]
    ```
@@ -140,22 +161,24 @@ ssh-agent is a program that manages SSH keys for you.
 
 1. Ensure the ssh-agent is running:
 
-   ```
+   ```shell
 eval $(ssh-agent -s)
 > Agent pid 59566
    ```
    
 1. Add your SSH private key to the ssh-agent.
 
-   ```
+   ```shell
 ssh-add ~/.ssh/id_rsa
    ```
 
 #### [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
   1. Copy the SSH key to your clipboard.
-   ```
+  
+       ```shell
 clip < ~/.ssh/id_rsa.pub
-    ```
+        ```
+ 
   1. Go to [GitHub]
   1. In the upper-right corner of any page, click your profile photo, then click Settings.
   1. In the user settings sidebar, click SSH and GPG keys.
@@ -229,14 +252,18 @@ GitHub will update the website automatically.  It is that simple.
 
 #### Subsequent Work Flow
 
-When more than two people are working on the same repository then, *before they start editing*, they download any changes that have been made since the last time the worked on the repository (**pull**).  They can then **edit**, **commit**, and **push** their changes.  Doing a pull before doing anything else is very good practice and keeps life simple.
+When more than two people are working on the same repository then, *before they start editing*, they download any changes that have been made since the last time the worked on the repository (**pull**).  They can then **edit**, **commit**, and **push** their changes.
 
-If you have made changes, and someone else has made changes at the same time, then Git allows you to merge them together easily.  Merging, however, is beyond the scope of this document as it should rarely be an issue for a simple repository like this one.
+- Doing a pull before doing anything else is very good practice and keeps life simple.
+
+#### Simultaneous Editing
+
+If you have made changes, and someone else has made changes at the same time, then Git allows you to merge them together easily.  Merging, however, is beyond the scope of this document as it should rarely be an issue for a simple repository, with few contributors, like this one.
 
 
 ### Download this Repository
 
-You will need to download this repository from GitHub.
+You will need to download [this repository](https://github.com/Swanfield/manuals) from GitHub.
 
 1. If you haven't already, navigate to the parent folder of the git folder you created earlier (~/documents/ i.e. C:\Users\UserName\Documents\).
 1. Right-click the git folder and select "Git Bash here"
@@ -246,91 +273,89 @@ You will need to download this repository from GitHub.
 git clone git@github.com:Swanfield/manuals.git
     ```
     This will create a manuals folder (~/git/manuals/).
+
 1. Enter the folder:
-```
+
+    ```
 cd manuals
-```
+    ```
+
 1. You can view the contents of the folder at the command line:
-```
+
+    ```
 ls
-```
-or, for a more detailed view:
-```
+    ```
+
+    or, for a more detailed view:
+
+    ```
 ls -la
-```
-or you can view it's contents in the normal way with windows explorer.
+    ```
+
+    or you can view it's contents in the normal way with windows explorer.
 
 ### Branches
 
-You will see that there isn't much there initially.  That is because you are looking at the master branch and we aren't using it for much at the moment.  The documentation files are all in a special branch used specifically by GitHub Pages.
+You will see that there isn't much there initially.  That is because you are looking at the master branch and we aren't using it for much at the moment.  The documentation files are all in a special branch, called gh-pages, used specifically by GitHub Pages.
 
 #### What are Branches?
 
+The actual inner workings of Git is not for the faint of heart.  Essentially though git keeps a compressed record of every file - and the changes made to every file - in your repository (this record is kept in the .git folder in every repository). Branches are basically separate repositories that live in the same folder but not at the same time. When you move to one branch from another (checkout a branch) all the files in the repository's folder are removed and the new branch is created dynamically from git's compressed record.
 
+You can see this in action now.
 
-## Build the Theme
-
-Follow these instructions to build the theme.
-
-### 1. Download the theme
-
-First download or clone the theme from the [GitHub repo](https://github.com/tomjohnson1492/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense. In GitHub, click the **Clone or download** button, and then click **Download ZIP**.
-
-### 2. Install Jekyll
-
-If you've never installed or run a Jekyll site locally on your computer, follow these instructions to install Jekyll:
-
-* [Install Jekyll on Mac][theme_install_jekyll_on_mac]
-* [Install Jekyll on Windows][theme_install_jekyll_on_windows]
-
-### 3. Install Bundler
-
-In case you haven't installed Bundler, install it:
-
+1. Open the repository's folder in Windows Explorer.  You will see only a few files and folders.
+1. Bring up the Git Bash window and move it so that you can see the contents of the repository's folder behind it.
+1. Now, in the terminal type:
 ```
-gem install bundler
+git checkout gh-pages
+```
+1. You will briefly see all the files from the repository's master branch disappear and be replaced by all the files from the gh-pages branch (GitHub Pages branch).
+1. If you want to see this again you can type:
+```
+git checkout master
 ```
 
-You'll want [Bundler](http://bundler.io/) to make sure all the Ruby gems needed work well with your project. Bundler sorts out dependencies and installs missing gems or matches up gems with the right versions based on gem dependencies.
+As we don't plan to work on the gh-pages branch please ensure that it is the last branch that you have checked out.
 
-### 4. Option 1: Build the Theme (*without* the github-pages gem) {#option1}
+## View Your Documents Locally Before You Push
 
-Use this option if you're not planning to publish your Jekyll site using [GitHub Pages](https://pages.github.com/).
+You can view your documents, and any changes that you have made to them on your own computer before you commit them and/or push them to GitHub.  This is actually a very good idea as even a small typo will cause you to make another edit, another commit, and another push.  GitHub will only build the website a limited number of times a day for you so it is best practice to check your changes before you commit (and especially before you push).
 
-Bundler's Gemfile is how it specifies and manages project dependencies are managed. Although this project includes a Gemfile, this theme doesn't have any dependencies beyond core Jekyll. The Gemfile is used to specify gems needed for publishing on GitHub Pages. **If you're not planning to have GitHub Pages build your Jekyll project, delete these two files from the theme's root directory:**
+### Bundler
 
-* Gemfile
-* Gemfile.lock
+Earlier, we installed [Bundler](http://bundler.io/).  This is the magic sauce that lets us install and run all the software required to view our GitHub Pages website locally on our own computer.
 
-If you've never run Jekyll on your computer (you can check with `jekyll --version`), you may need to install the jekyll gem:
-
-```
-gem install jekyll
-```
-
-Now run jekyll serve (first change directories (`cd`) to where you downloaded the project):
+Use Bundler to install all the needed Ruby gems:
 
 ```
-jekyll serve
+bundle install
 ```
 
-### 4. Option 2: Build the Theme (*with* the github-pages gem) {#option2}
-
-If you *are* in fact publishing on GitHub Pages, leave the Gemfile and Gemfile.lock files in the theme.The Gemfile tells Jekyll to use the github-pages gem. **However, note that you cannot use the normal `jekyll serve` command with this gem due to dependency conflicts between the latest version of Jekyll and GitHub Pages** (which are noted [briefly here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)).
-
-You need Bundler to resolve these dependency conflicts. Use Bundler to install all the needed Ruby gems:
-
-```
-bundle update
-```
-
-Then *always* use this command to build Jekyll:
+Then always use this command to build Jekyll:
 
 ```
 bundle exec jekyll serve
 ```
 
-If you want to shorten this long command, you can put this code in a file such as jekyll.sh (on a Mac) and then simply type `. jekyll.sh` to build Jekyll.
+As this is pretty long, we will create a short alias, called "jserve" for this command later.
+
+You will now be able to view your documentation at:
+
+[http://127.0.0.1:4000/](http://127.0.0.1:4000/)
+
+If you are using an editor that allows you to preview Markdown files then you will see between this theme and Jekyll (the application GitHub and Bundler use to generate the webpages), your changes might not appear exactly as you had expected.
+
+If you need to make changes then you will need to stop the jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about half a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.
+
+### How it works
+
+When you run Jekyll through Bundler two things are done.
+
+- First, Jekyll runs through all the files in the repository and generates static web pages from them.  It puts these pages in the ```_site/``` folder.
+- Secondly, a wee web server is run to serve those pages to your web browser.
+
+You don't have to use the web server to access the pages.  You can open them in your browser directly and they should work as intended.  
 
 ## Configure the sidebar
 
