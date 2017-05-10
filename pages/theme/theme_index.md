@@ -12,12 +12,12 @@ summary: How to install, set-up and quickly get started with this theme.
 
 You will need:
 
-* A [Github] account
+* A [GitHub] account
 * Ruby for Windows
 * [Git for Windows](https://git-scm.com/), [TortoiseGit](https://tortoisegit.org/), and/or [GitHub Desktop](https://help.github.com/desktop/guides/getting-started/installing-github-desktop/)
 * Jekyll 
 * Bundler
-* A text editor like [Sublime Text](https://www.sublimetext.com/)
+* A UTF-8 compatible text editor like [Sublime Text](https://www.sublimetext.com/)
 
 ## Install The Software
 
@@ -27,7 +27,8 @@ The easiest way to install and manage the software required for this project is 
 
 [Install Chocolatey](https://chocolatey.org/install)
 
-At the time
+At the time of writing, copy and paste this to the command line:
+
 ```
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
@@ -51,6 +52,7 @@ choco install git.install
 choco install tortoisegit 
 choco install github 
 ```
+I have not used [GitHub Desktop] so will not document it here until I have.
 
 ### Install Bundler and Jekyll
 
@@ -67,6 +69,153 @@ Any text editor that can handle UTF-8 encoded text files is recommended (unfortu
 
 Download Sublime Text 3 from here: https://www.sublimetext.com/3
 
+## Set up Git
+
+You will need to synchronise your newly installed version of git with GitHub.  I have not used [GitHub Desktop] so will not document it here until I have.  [TortoiseGit] uses the same settings as [Git for Windows].  You can think of it simply as a Windows Explorer add-on for Git.  I will focus on [Git for Windows] as I am most familiar with this but if you really like using your mouse and Windows Explorer then pretty much anything that can be done on the command line with [Git for Windows] can be done with [TortoiseGit].
+
+### Open the Git Shell application
+
+1. I would suggest creating a folder called git in your Documents folder in Windows Explorer;
+1. Right click on the folder;
+1. Select "Git Bash here", and a shell window will open.  This shell window uses Unix/Bash style commands rather than Windows style commands.
+1. Set a Git username:
+
+    ```
+git config --global user.name "My Name"
+    ```
+1. Confirm that you have set the Git username correctly:
+
+    ```
+git config --global user.name
+> My Name
+    ```
+1. Set an email address in Git. To keep your email address private, you can use the address username@users.noreply.github.com, replacing username with your GitHub username.  You will need to [tell GitHub to keep your email address private](https://help.github.com/articles/keeping-your-email-address-private/).
+
+    ```
+git config --global user.email "email@example.com"
+    ```
+1. Confirm that you have set the email address correctly in Git:
+    ```
+git config --global user.email
+> email@example.com
+    ```
+1. [Link the email address to your GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/), so that your commits can be attributed to you and displayed in your contributions graph.
+
+### Set up authentication with GitHub.
+
+When you download or "clone" a repository from GitHub you need to connect securely and authenticate yourself.  This is done automatically with a protocol called SSH but it still needs to be set up.
+
+ If you have GitHub Desktop installed, you can use it to clone repositories and not deal with SSH keys. 
+
+#### Generate a new SSH key
+
+Generate an SSH public-private keypair on your computer.  You will add the public key to your GitHub account later.
+
+1. Open Git Bash.
+1. Paste the text below, substituting in your GitHub email address.
+   ```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+This creates a new ssh key, using the provided email as a label.
+
+   ```
+Generating public/private rsa key pair.
+   ```
+1. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+   ```
+Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]
+   ```
+
+1. If other people share your computer with you then, at the prompt, type a secure passphrase. You will need to type in this passphrase everytime you connect to GitHub.  If you are the only person who uses your computer then you can probably leave this blank.
+
+   ```
+Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+   ```
+
+#### Add your SSH key to the ssh-agent
+
+ssh-agent is a program that manages SSH keys for you.
+
+1. Ensure the ssh-agent is running:
+
+   ```
+eval $(ssh-agent -s)
+> Agent pid 59566
+   ```
+   
+1. Add your SSH private key to the ssh-agent.
+
+   ```
+ssh-add ~/.ssh/id_rsa
+   ```
+
+1. [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+  1. Copy the SSH key to your clipboard.
+   ```
+clip < ~/.ssh/id_rsa.pub
+    ```
+  1. Go to [GitHub]
+  1. In the upper-right corner of any page, click your profile photo, then click Settings.
+  1. In the user settings sidebar, click SSH and GPG keys.
+   1. Click New SSH key or Add SSH key.
+   1. In the "Title" field, add a descriptive label for the new key. e.g. "Work PC."
+   1. Paste your key into the "Key" field.
+   1. Click Add SSH key.
+   1. If prompted, confirm your GitHub password.
+
+#### Used a Passphrase? Auto Launch ssh-agent with Git Bash
+
+ssh-agent runs each time you connect to GitHub.  However, if you have used a passphrase then you can have in the background when you start Git Bash.  It will only ask for your passphrase once at the start of your session.
+
+Find one of the following files in your user root directory (e.g. C:\Users\YourUsername\ - this directory is shortened to ~/ in Unix/Bash).
+
+~/.profile
+
+or
+
+~/.bashrc
+
+You can right click the file and open it with Sublime Text or you can open Sublime Text and drag and drop the file to it.
+
+Copy and paste the following into the file that you selected and save (ctrl-s).
+
+```
+env=~/.ssh/agent.env
+
+agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+
+agent_start () {
+    (umask 077; ssh-agent >| "$env")
+    . "$env" >| /dev/null ; }
+
+agent_load_env
+
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add
+fi
+
+unset env
+```
+
+
+
+
+
+
+
+## Download the Theme
+
+You will need to download the theme from GitHub.
+
+
 
 ## Build the Theme
 
@@ -74,7 +223,7 @@ Follow these instructions to build the theme.
 
 ### 1. Download the theme
 
-First download or clone the theme from the [Github repo](https://github.com/tomjohnson1492/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense. In Github, click the **Clone or download** button, and then click **Download ZIP**.
+First download or clone the theme from the [GitHub repo](https://github.com/tomjohnson1492/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense. In GitHub, click the **Clone or download** button, and then click **Download ZIP**.
 
 ### 2. Install Jekyll
 
@@ -95,9 +244,9 @@ You'll want [Bundler](http://bundler.io/) to make sure all the Ruby gems needed 
 
 ### 4. Option 1: Build the Theme (*without* the github-pages gem) {#option1}
 
-Use this option if you're not planning to publish your Jekyll site using [Github Pages](https://pages.github.com/).
+Use this option if you're not planning to publish your Jekyll site using [GitHub Pages](https://pages.github.com/).
 
-Bundler's Gemfile is how it specifies and manages project dependencies are managed. Although this project includes a Gemfile, this theme doesn't have any dependencies beyond core Jekyll. The Gemfile is used to specify gems needed for publishing on Github Pages. **If you're not planning to have Github Pages build your Jekyll project, delete these two files from the theme's root directory:**
+Bundler's Gemfile is how it specifies and manages project dependencies are managed. Although this project includes a Gemfile, this theme doesn't have any dependencies beyond core Jekyll. The Gemfile is used to specify gems needed for publishing on GitHub Pages. **If you're not planning to have GitHub Pages build your Jekyll project, delete these two files from the theme's root directory:**
 
 * Gemfile
 * Gemfile.lock
@@ -116,7 +265,7 @@ jekyll serve
 
 ### 4. Option 2: Build the Theme (*with* the github-pages gem) {#option2}
 
-If you *are* in fact publishing on Github Pages, leave the Gemfile and Gemfile.lock files in the theme.The Gemfile tells Jekyll to use the github-pages gem. **However, note that you cannot use the normal `jekyll serve` command with this gem due to dependency conflicts between the latest version of Jekyll and Github Pages** (which are noted [briefly here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)).
+If you *are* in fact publishing on GitHub Pages, leave the Gemfile and Gemfile.lock files in the theme.The Gemfile tells Jekyll to use the github-pages gem. **However, note that you cannot use the normal `jekyll serve` command with this gem due to dependency conflicts between the latest version of Jekyll and GitHub Pages** (which are noted [briefly here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)).
 
 You need Bundler to resolve these dependency conflicts. Use Bundler to install all the needed Ruby gems:
 
@@ -336,7 +485,7 @@ See [Posts][theme_posts] for more information.
 
 ## Markdown
 
-This theme uses [kramdown markdown](http://kramdown.gettalong.org/). kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
+This theme uses [kramdown markdown](http://kramdown.gettalong.org/). kramdown is similar to GitHub-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
 
 ```
 1.  First item
