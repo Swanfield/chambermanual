@@ -1,60 +1,71 @@
 ---
-title: Getting started with the Documentation Theme for Jekyll
+title: Getting started
 keywords: sample homepage
 tags: [getting_started]
 sidebar: theme_sidebar
 permalink: theme_index.html
 folder: theme
-summary: How to install, set-up and get started quickly with the theme.
+summary: How to install, set-up and quickly get started with this theme.
 ---
 
-# Introduction
+## Introduction
 
 You will need:
 
 * A [Github] account
 * Ruby for Windows
-* (Git for Windows](https://git-scm.com/), [TortoiseGit](https://tortoisegit.org/), and/or [GitHub Desktop](https://help.github.com/desktop/guides/getting-started/installing-github-desktop/)
+* [Git for Windows](https://git-scm.com/), [TortoiseGit](https://tortoisegit.org/), and/or [GitHub Desktop](https://help.github.com/desktop/guides/getting-started/installing-github-desktop/)
 * Jekyll 
 * Bundler
 * A text editor like [Sublime Text](https://www.sublimetext.com/)
 
-# Install The Software
+## Install The Software
 
 The easiest way to install and manage the software required for this project is to first install [Chocolatey](https://chocolatey.org/).
 
-## Install Chocolatey
+### Install Chocolatey
 
 [Install Chocolatey](https://chocolatey.org/install)
 
-At the time of writing the easiest way to install Chocolatey is to copy and paste the following into the command line and execute:
+At the time
+```
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
 
-  @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-
-## Install Ruby for Windows
+### Install Ruby for Windows and Ruby Development Kit
 
 At the command line enter:
 
-  choco install ruby -y
+```
+choco install ruby -y
+choco install ruby2.devkit
+```
 
-## Install Git for Windows
+### Install Git for Windows
+
 
 You can pick anyone of the following or all three:
 
-  choco install git.install
-  choco install tortoisegit 
-  choco install github 
+```
+choco install git.install
+choco install tortoisegit 
+choco install github 
+```
 
-## Install Bundler and Jekyll
+### Install Bundler and Jekyll
 
 At the command line enter:
 
-  gem install bundler
-  gem install jekyll
+```
+gem install bundler
+gem install jekyll
+```
 
-## Install a text editor
+### Install a text editor
 
-Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  [Sublime Text](https://www.sublimetext.com/) is a commonly recommended editor which can be downloaded and evaluated for free but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.  Download Sublime Text from here: https://www.sublimetext.com/3
+Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  [Sublime Text](https://www.sublimetext.com/) is a commonly recommended editor which can be downloaded with an unlimited free trial but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.
+
+Download Sublime Text 3 from here: https://www.sublimetext.com/3
 
 
 ## Build the Theme
