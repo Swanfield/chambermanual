@@ -151,7 +151,7 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
    ```
 
-1. [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+#### [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
   1. Copy the SSH key to your clipboard.
    ```
 clip < ~/.ssh/id_rsa.pub
@@ -159,7 +159,7 @@ clip < ~/.ssh/id_rsa.pub
   1. Go to [GitHub]
   1. In the upper-right corner of any page, click your profile photo, then click Settings.
   1. In the user settings sidebar, click SSH and GPG keys.
-   1. Click New SSH key or Add SSH key.
+  1. Click New SSH key or Add SSH key.
    1. In the "Title" field, add a descriptive label for the new key. e.g. "Work PC."
    1. Paste your key into the "Key" field.
    1. Click Add SSH key.
@@ -167,7 +167,9 @@ clip < ~/.ssh/id_rsa.pub
 
 #### Used a Passphrase? Auto Launch ssh-agent with Git Bash
 
-ssh-agent runs each time you connect to GitHub.  However, if you have used a passphrase then you can have in the background when you start Git Bash.  It will only ask for your passphrase once at the start of your session.
+ssh-agent runs each time you connect to GitHub.  However, if you have used a passphrase then you can have it run in the background when you start Git Bash.  This way, it will only ask for your passphrase once - at the start of your session - rather than each time you connect to GitHub.
+
+##### Edit .profile or .bashrc
 
 Find one of the following files in your user root directory (e.g. C:\Users\YourUsername\ - this directory is shortened to ~/ in Unix/Bash).
 
@@ -177,9 +179,9 @@ or
 
 ~/.bashrc
 
-You can right click the file and open it with Sublime Text or you can open Sublime Text and drag and drop the file to it.
+You can right click the file and open it with Sublime Text or you can open Sublime Text and drag and drop the file into it.
 
-Copy and paste the following into the file that you selected and save (ctrl-s).
+Copy and paste the following into the file that you selected and then save (ctrl-s).
 
 ```
 env=~/.ssh/agent.env
@@ -205,15 +207,64 @@ fi
 unset env
 ```
 
+## Git and The Repository
+
+### What is Git?
+
+So, we have spent all this time setting up Git so that it will work with GitHub but what exactly is Git?
+
+Git is a version control system which allows a team of people to work together, all using the same files. It helps the team cope with the confusion that tends to happen when multiple people are editing the same files.
+
+Git is very sophisticated but we are using it in a very simple way: *to download and upload files contained in our repository.*
+
+#### Initial Work Flow
+
+We first:
+- download the repository from GitHub (**clone** the GitHub repository).
+- We then make changes to it (**edit**),
+- save the changes locally to the repository (**commit**),
+- and upload the changes to GitHub (**push**).
+
+GitHub will update the website automatically.  It is that simple.
+
+#### Subsequent Work Flow
+
+When more than two people are working on the same repository then, *before they start editing*, they download any changes that have been made since the last time the worked on the repository (**pull**).  They can then **edit**, **commit**, and **push** their changes.  Doing a pull before doing anything else is very good practice and keeps life simple.
+
+If you have made changes, and someone else has made changes at the same time, then Git allows you to merge them together easily.  Merging, however, is beyond the scope of this document as it should rarely be an issue for a simple repository like this one.
 
 
+### Download this Repository
 
+You will need to download this repository from GitHub.
 
+1. If you haven't already, navigate to the parent folder of the git folder you created earlier (~/documents/ i.e. C:\Users\UserName\Documents\).
+1. Right-click the git folder and select "Git Bash here"
+1. If Git has been setup correctly then all you need to do is copy and paste this to the Git Bash window's command line:
 
+    ```
+git clone git@github.com:Swanfield/manuals.git
+    ```
+    This will create a manuals folder (~/git/manuals/).
+1. Enter the folder:
+```
+cd manuals
+```
+1. You can view the contents of the folder at the command line:
+```
+ls
+```
+or, for a more detailed view:
+```
+ls -la
+```
+or you can view it's contents in the normal way with windows explorer.
 
-## Download the Theme
+### Branches
 
-You will need to download the theme from GitHub.
+You will see that there isn't much there initially.  That is because you are looking at the master branch and we aren't using it for much at the moment.  The documentation files are all in a special branch used specifically by GitHub Pages.
+
+#### What are Branches?
 
 
 
