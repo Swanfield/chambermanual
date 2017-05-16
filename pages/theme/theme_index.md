@@ -12,7 +12,7 @@ summary: How to install, set-up and quickly get started with this theme.
 
 You will need:
 
-* A [GitHub] account
+* A [GitHub](https://github.com/) account
 * Ruby for Windows
 * [Git for Windows](https://git-scm.com/), [TortoiseGit](https://tortoisegit.org/), and/or [GitHub Desktop](https://help.github.com/desktop/guides/getting-started/installing-github-desktop/)
 * Jekyll 
@@ -30,7 +30,7 @@ The easiest way to install and manage the software required for this project is 
 
 [Install Chocolatey](https://chocolatey.org/install)
 
-At the time of writing, copy and paste this to the command line:
+At the time of writing, copy and paste this to the command line (with administrator privliges):
 
 ```shell
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
@@ -42,37 +42,52 @@ At the time of writing, copy and paste this to the command line:
 At the command line enter:
 
 ```shell
-choco install ruby -y
-choco install ruby2.devkit
+choco install ruby ruby2.devkit -y
 ```
 
+You now need to initialise and install the Ruby Development Kit.
+
+```shell
+cd C:\tools\DevKit2
+ruby dk.rb init
+```
+
+Now edit config.yml in the DevKit2 directory and add the following at the bottom if it isn't already there.:
+
+```shell
+ - C:/tools/ruby23
+```
 
 ### Install Git for Windows
 
 You can pick anyone of the following or all three:
 
 ```shell
-choco install git.install
-choco install tortoisegit 
+choco install git.install tortoisegit -y
 choco install github 
 ```
-I have not used [GitHub Desktop] so will not document it here until I have.
+I have not used [GitHub Desktop](https://desktop.github.com/), and have not been able to install it with chocolatey, so will not document it here until I have.
 
 
-### Install Bundler
+### Install Bundler and Jekyll
 
-At the command line enter:
+At the command line enter (you will need to open a new window):
+
+**NB** Your firewall might throw up a warning about the the software connecting to the internet.  You have to click OK fairly promptly or it will time out and you will have problems getting it to work again.
 
 ```shell
-gem install bundler
+gem install bundler jekyll
 ```
-
 
 ### Install a text editor
 
 Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  [Sublime Text](https://www.sublimetext.com/) is a commonly recommended editor which can be downloaded with an unlimited free trial but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.
 
-Download Sublime Text 3 from here: https://www.sublimetext.com/3
+Download Sublime Text 3 from here: https://www.sublimetext.com/3 or:
+
+```shell
+choco install sublimetext3.packagecontrol -y
+```
 
 
 
@@ -83,7 +98,7 @@ You will need to synchronise your newly installed version of git with GitHub.  I
 
 ### Open the Git Shell application
 
-1. I would suggest creating a folder called git in your Documents folder in Windows Explorer;
+1. I would suggest creating a folder called git in your Documents folder in Windows Explorer (or in your public documents folder);
 1. Right click on the folder;
 1. Select "Git Bash here", and a shell window will open.  This shell window uses Unix/Bash style commands rather than Windows style commands.
 1. Set a Git username:
@@ -115,6 +130,12 @@ git config --global user.email
    ```
 
 1. [Link the email address to your GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/), so that your commits can be attributed to you and displayed in your contributions graph.
+
+1. Ensure that you commit Unix style line endings.  Windows uses different characters for line endings to Unix but most web servers run on Unix so it is good to ensure that your commits are Unix friendly.
+
+   ```shell
+git config --global core.autocrlf input
+   ```
 
 
 
@@ -338,6 +359,8 @@ Then always use this command to build Jekyll:
 bundle exec jekyll serve
 ```
 
+**NB** If this doesn't work then you probably haven't installed the Ruby Development Kit correctly which prevents "bundle install" from installing all the required gems.
+
 As this is pretty long, we will create a short alias, called "jserve" for this command later.
 
 You will now be able to view your documentation at:
@@ -346,7 +369,7 @@ You will now be able to view your documentation at:
 
 If you are using an editor that allows you to preview Markdown files then you will see between this theme and Jekyll (the application GitHub and Bundler use to generate the webpages), your changes might not appear exactly as you had expected.
 
-If you need to make changes then you will need to stop the jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about half a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.
+If you need to make changes then you will need to stop the jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.
 
 ### How it works
 
@@ -357,242 +380,3 @@ When you run Jekyll through Bundler two things are done.
 
 You don't have to use the web server to access the pages.  You can open them in your browser directly and they should work as intended.  
 
-## Configure the sidebar
-
-There are several products in this theme. Each product uses a different sidebar. This is the essence of what makes this theme unique -- different sidebars for different product documentation. The idea is that when users are reading documentation for a specific product, the sidebar navigation should be specific to that product. (You can read more of my thoughts on why multiple sidebars are important in this [blog post](http://idratherbewriting.com/2016/03/23/release-of-documentation-theme-for-jekyll-50/).)
-
-The top navigation remains the same, because it allows users to navigate across products. But the sidebar navigation adapts to the product.
-
-Because each product uses a different sidebar, you'll need to set up your sidebars. There's a file inside \_includes/custom called "sidebarconfigs.html." This file controls which sidebar gets associated with which product. Open up this file to see its contents.
-
-The sidebarconfigs.html file uses simple `if elsif` logic to set a variable that the sidebar.html file uses to read the sidebar data file. The code in sidebarconfigs.html looks like this:
-
-{% raw %}
-```liquid
-{% if page.sidebar == "home_sidebar" %}
-{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-
-{% elsif page.sidebar == "product1_sidebar" %}
-{% assign sidebar = site.data.sidebars.product1_sidebar.entries %}
-
-{% elsif page.sidebar == "product2_sidebar" %}
-{% assign sidebar = site.data.sidebars.product2_sidebar.entries %}
-
-{% elsif page.sidebar == "theme_sidebar" %}
-{% assign sidebar = site.data.sidebars.theme_sidebar.entries %}
-
-{% else %}
-{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-{% endif %}
-```
-{% endraw %}
-
-In each page's frontmatter, you must specify the sidebar you want that page to use. Here's an example of the page frontmatter showing the sidebar property:
-
-<pre>
----
-title: Alerts
-tags: [formatting]
-keywords: notes, tips, cautions, warnings, admonitions
-last_updated: July 3, 2016
-summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
-<span class="red">sidebar: theme_sidebar</span>
-permalink: theme_alerts
----
-</pre>
-
-The `sidebar: theme_sidebar` refers to the \_data/sidebars/theme_sidebar.yml file (meaning, the theme_sidebar.yml file inside the sidebars subfolder inside the \data folder).
-
-If no sidebar assignment is found in the page frontmatter, the default sidebar (specified by the `else` statement) will be shown: `site.data.sidebars.home_sidebar.entries`.
-
-Note that your sidebar can only have 2 levels. Given that each product has its own sidebar, this depth should be sufficient (it's really like 3 levels). Deeper nesting goes against usability recommendations.
-
-{% include note.html content="Note that each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level." %}
-
-You can optionally turn off the sidebar on any page (e.g. landing pages). To turn off the sidebar for a page, you should set the page frontmatter tag as `hide_sidebar: true`.
-
-For more detail on the sidebar, see [Sidebar navigation][theme_sidebar_navigation].
-
-## Sidebar syntax
-
-The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme. For example:
-
-```yaml
-entries:
-- title: sidebar
-  product: Jekyll Doc Theme
-  version: 6.0
-  folders:
-
-  - title: Overview
-    output: web, pdf
-    folderitems:
-
-    - title: Get started
-      url: /index.html
-      output: web, pdf
-
-    - title: Introduction
-      url: /theme_introduction.html
-      output: web, pdf
-
-    - title: Supported features
-      url: /theme_supported_features.html
-      output: web, pdf
-
-    - title: About the theme author
-      url: /theme_about.html
-      output: web, pdf
-
-    - title: Support
-      url: /theme_support.html
-      output: web, pdf
-
-  - title: Release Notes
-    output: web, pdf
-    folderitems:
-
-    - title: 6.0 Release notes
-      url: /theme_release_notes_60.html
-      output: web, pdf
-
-    - title: 5.0 Release notes
-      url: /theme_release_notes_50.html
-      output: web, pdf
-
-```
-
-Each `folder` or `subfolder` must contain a `title` and `output` property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
-
-The two outputs available are `web` and `pdf`. (Even if you aren't publishing PDF, you still need to specify `output: web`).
-
-The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial](theme_yaml_tutorial) for more details about how YAML works.
-
-To accommodate the title page and table of contents in PDF outputs, each product sidebar must list these pages before any other:
-
-```yaml
-- title:
-  output: pdf
-  type: frontmatter
-  folderitems:
-  - title:
-    url: /titlepage
-    output: pdf
-    type: frontmatter
-  - title:
-    url: /tocpage
-    output: pdf
-    type: frontmatter
-```
-
-Leave the output as `output: pdf` for these frontmatter pages so that they don't appear in the web output.
-
-For more detail on the sidebar, see [Sidebar navigation][theme_sidebar_navigation] and [YAML tutorial][theme_yaml_tutorial].
-
-## Relative links and offline viewing
-
-This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you're hosting it. It's common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links.
-
-To view pages locally on your machine (without the Jekyll preview server), they need to have the `.html` extension. The `permalink` property in the page's frontmatter (without surrounding slashes) is what pushes the files into the root directory when the site builds.
-
-## Page frontmatter
-
-When you write pages, include these same frontmatter properties with each page:
-
-```yaml
----
-title: "Some title"
-tags: [sample1, sample2]
-keywords: keyword1, keyword2, keyword3
-last_updated: Month day, year
-summary: "optional summary here"
-sidebar: sidebarname
-permalink: filename.html
----
-```
-
-(You will customize the values for each of these properties, of course.)
-
-For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash `\`.
-
-Values for `keywords` get populated into the metadata of the page for SEO.
-
-Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won't auto-create these tag files.)
-
-If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
-
-The `permalink` value should be the same as your filename and include the ".html" file extension.
-
-For more detail, see [Pages][theme_pages].
-
-## Where to store your documentation topics
-
-You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the \_pages directory. Inside \_pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.
-
-Note that product1, product2, and theme are all just sample content to demonstrate how to add multiple products into the theme. You can freely delete that content.
-
-For more information, see [Pages][theme_pages] and [Posts][theme_posts].
-
-## Configure the top navigation
-
-The top navigation bar's menu items are set through the \_data/topnav.yml file. Use the top navigation bar to provide links for navigating from one product to another, or to navigate to external resources.
-
-For external URLs, use `external_url` in the item property, as shown in the example topnav.yml file. For internal links, use `url` the same was you do in the sidebar data files.
-
-Note that the topnav has two sections: `topnav` and `topnav_dropdowns`. The topnav section contains single links, while the `topnav_dropdowns` section contains dropdown menus. The two sections are independent of each other.
-
-## Generating PDF
-
-If you want to generate PDF, you'll need a license for [Prince XML](http://www.princexml.com/). You will also need to [install Prince](http://www.princexml.com/doc/installing/).  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page, and you're supposed to buy the license to use it.
-
-If you're on Windows, install [Git Bash client](https://git-for-windows.github.io/) rather than using the default Windows command prompt.
-
-Open up the css/printstyles.css file and customize the email address (`youremail@domain.com`) that is listed there. This email address appears in the bottom left footer of the PDF output. You'll also need to create a PDF configuration file following the examples shown in the pdfconfigs folder, and also customize some build scripts following the same pattern shown in the root: pdf-product1.sh
-
-See the section on [Generating PDFs][theme_generating_pdfs] for more details about setting the theme up for this output.
-
-## Blogs / News
-
-For blog posts, create your markdown files in the \_posts folder following the sample formats. Post file names always begin with the date (YYYY-MM-DD-title).
-
-The news/news.html file displays the posts, and the news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.
-
-See [Posts][theme_posts] for more information.
-
-## Markdown
-
-This theme uses [kramdown markdown](http://kramdown.gettalong.org/). kramdown is similar to GitHub-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
-
-```
-1.  First item
-2.  Second item
-3.  Third item
-```
-
-When you want to insert paragraphs, notes, code snippets, or other matter in between the list items, use four spaces to indent. The four spaces will line up with the first letter of the list item (the <b>F</b>irst or <b>S</b>econd or <b>T</b>hird).
-
-```
-1.  First item
-
-    ```
-    alert("hello");
-    ```
-
-2.  Second item
-
-    Some pig!
-
-3.  Third item
-```
-
-See the topics under "Formatting" in the sidebar for more information.
-
-## Automated links
-
-If you want to use an automated system for managing links, see [Automated Links][theme_hyperlinks.html#automatedlinks]. This approach automatically creates a list of Markdown references to simplify linking.
-
-## Other instructions
-
-The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.
-
-{% include links.html %}

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Komodo Project File - DO NOT EDIT -->
-<project id="26760e5f-5afe-4839-8504-57405fe9fffe" kpf_version="5" name="Manuals.komodoproject">
-<preference-set idref="26760e5f-5afe-4839-8504-57405fe9fffe" id="project" preftype="project">
-  <string id="import_exclude_matches">*.komodo*</string>
-  <string id="import_include_matches">.g*;*;*.*</string>
-  <long id="prefs_version">1</long>
-</preference-set>
-</project>

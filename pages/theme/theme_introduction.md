@@ -37,8 +37,8 @@ Easily produce nice looking documentation by:
 
 The software does all the hard work to convert the simple text documents into attractive web pages or practical pdf documents.  The caveat is that the user needs to learn a specific work flow to create and generate these pages.
 
-## Getting started
+## Get Setup
 
-To get started, see [Getting Started][theme_index].
+To get setup, see [Setup The Software][theme_index].
 
 {% include links.html %}

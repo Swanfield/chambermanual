@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>The Control Panel | MS Therapy Centre Lothian Manuals</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> MS Therapy Centre Lothian Manuals</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="m4c_introduction.html">Chamber Manual</a></li>
+                        
+                        
+                        
+                        <li><a href="theme_introduction.html">Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Original Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Swanfield@github.com?subject=MS Therapy Centre Lothian Manuals feedback&body=I have some feedback about the The Control Panel page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The Control Panel">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Chamber Manual 1.0</li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Introduction</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Oxygen System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Compressor and Air System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Chamber</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Facemasks</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Control Panel</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Water Deluge System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Conclusion</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The Control Panel</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/Swanfield/manuals/blob/gh-pages/pages/chamber_manual/m4c_the_control_panel.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+  <h2 id="the-control-panel">The Control Panel.</h2>
+
+<h2 id="air-taps-and-the-pipework">Air Taps and the pipework.</h2>
+
+<p>The Peglar Air Taps are to be stripped and the ‘O’ rings replaced and lubricated using an air silicone grease. Check all the joints for leaks, tighten up the fittings if required. If the taps start to let air past it has been found in the past that they are not being turned off tight enough, ‘nip’ the tap closed this will force the wedge into the seat, and clean away any small debris on the face of the valve.</p>
+
+<p>The Air Receiver Gauge this gauge will show you the pressure in the air receiver, you will not get a correct gauge reading whilst air is being removed from the tank, To check on the tanks content the air inlet tap on the panel must be turned off.</p>
+
+<p>The Therapeutic Depth Gauge, this gauge is very accurate and will measure down to feet / inches / Bar on it’s dual scale. It must be checked for freedom of movement both up and down the scale, the lubrication of this gauge is not allowed, if the incorrect oil is used it will ‘stick’ the movement up and make the action “jumpy’ Do not tap the glass, tap the panel if needed. Remember this gauge costs £543.00 so don’t abuse it.</p>
+
+<p>The Analyser and the Bobbin Flow Meter is to be inspected for serviceability by checking that with the sensor removed the L.C.D. reads 000 with the sensor fitted it reads 21% if it fails the test, check the battery state (101 D2 can not be checked in this way) The life of the Cell is now approx 18 mths. to 2 years. Never try to calibrate the Analyser if the battery hasn’t got a full charge. The Bobbin Flow Meter is set to 2 Lpm. This will give the unit just a ‘sniff any more will give an inaccurate reading. The Analyser can be left on ALL the time if you like, it will NOT effect the life of the cell as the moment the cell is removed from the Nitrogen filled bag the clock is ticking on it’s life, (see the sheet marked Analyser Check List.)</p>
+
+<p>The Radio system if fitted, all the wiring is to be inspected for state of repair, all speaker switches checked if found to be u/s replace with good quality switches,</p>
+
+<p>The headphones in the chamber have a life, replace when they are damaged, spares should be stocked. For the Patients peace of mind it could be pointed that the radio wires only carry mini voltage, ie. Decibels of sound.</p>
+
+<p>The Oxygen Shutoff Valve the main 02 tap is removed from the panel stripped, cleaned, lubricated using ‘Crystallube’ reassembled and refitted to the panel, when all the joints are tightened they must be inspected for any leaks. The ‘O’ rings in. the shutoff valve are ‘viton’ not ‘nitrile’, these are to be replaced on each service.</p>
+
+<p>The 5209 PM. Oxygen Regulator this particular regulator is fitted, as the incoming pressure can be as high as 3000 psi. and the outgoing pressure set as high as 250psi. this makes this regulator unique, most BOC regulators only work to ‘low’ out going pressures. This ‘reg.’ is removed from the panel stripped and cleaned using ‘trie’, a new ‘O’ ring is fitted plus the HP. Seat (which is rubber faced) and end fitting, lubricated using ‘Crystallube’ then reassemble and replace in the panel, check all joints for leaks. The Safety Valves fitted in the system are to protect the Demand Valve inside the chamber. Check these by lifting the central shaft to make certain that they move freely.</p>
+
+<p>The Oxygen Gauges mounted on the panel are specially designed gauges, they have ‘blow out’ plugs on the back and only this type can be used with Oxygen. On the panel are two gauges one will read the incoming 02 pressure and the other reads the pressure being supplied to the patients via the 5209 P.M. Oxygen Regulator.</p>
+
+<p>The Intercom this is a ‘hard wire’ unit into the chamber, runs on mains power stepped down to 9 volts on the master side, and only reading decibels inside the chamber on the ‘slave’. So there is no way that this unit could ever cause a problem on safety in the chamber.</p>
+
+<p>The Count Down Timer is the little unit is for the convenience of the operator in the timing of the dive.</p>
+
+<p>The Water Deluge Controls. They consist of the P.M. ‘Legris’ Ball Valve and the Martinair Spool Valve. The ball valve is operated every time the centre has a service and the water discharged outside the building, it is then reset and ‘tied’ back into place. The Spool Valve is the link between the Air system and the Oxygen system, in the event of the ‘fire’ this lever is operated and the Oxygen is shut down and the Air turned on. This valve must be stripped every service and all the ‘O’ rings replaced or leakage can be experienced across into the Oxygen System, this will be noticed by the pressure creeping up even though the oxygen is shut off. Clean internally using ‘trie’, lubricate using ‘crystallube’.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 MS Therapy Centre Lothian. All rights reserved. <br />
+ Site last generated: May 16, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

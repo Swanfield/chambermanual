@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>The Chamber | MS Therapy Centre Lothian Manuals</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> MS Therapy Centre Lothian Manuals</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="m4c_introduction.html">Chamber Manual</a></li>
+                        
+                        
+                        
+                        <li><a href="theme_introduction.html">Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Original Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Swanfield@github.com?subject=MS Therapy Centre Lothian Manuals feedback&body=I have some feedback about the The Chamber page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The Chamber">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Chamber Manual 1.0</li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Introduction</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Oxygen System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Compressor and Air System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Chamber</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Facemasks</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Control Panel</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Water Deluge System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Conclusion</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The Chamber</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/Swanfield/manuals/blob/gh-pages/pages/chamber_manual/m4c_the_chamber.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+  <h2 id="the-chamber">THE CHAMBER.</h2>
+
+<p>Manufactured to BS 5500: 1999 Cat 2. with a Design Pressure of 33ft. (2 ats) the Test Pressure of 66ft. (3 ats.)</p>
+
+<h2 id="chamber-types">Chamber Types.</h2>
+
+<p>Regardless of chamber size or type the basic system remains the same, the only slight difference would be the single chamber with no water deluge, all the others work the same, the complete system revolves around the compressor and the Oxygen demand valves.</p>
+
+<h2 id="chamber-door">Chamber Door.</h2>
+
+<p>The entrance door to the chamber is the only moving part to the chamber, it must swing freely on it’s hinges. The doors are mounted on roller bearings so will move very easily, the door must meet the frame squarely and the rubber sealing face or ‘O’ ring is of the utmost importance, all seals must be kept in a good state of repair, either oiled or powered, French Chalk will keep the seal in a lasting good state and will not be removed by the patients clothes as they pass through the doorway.</p>
+
+<h2 id="lb-78-overboard-dumps-comex-pro">L.B. 78. Overboard Dumps, (comex pro)</h2>
+
+<p>The L.B. 78 is the method that is used to expel the used Oxygen from the chamber to the outside atmosphere, Servicing of this item is again important, if the ‘dump’ fails then the pressurisation of the chamber will not take place as all the air will be discharged to the outside of the building. If this does occur during a dive turn the ball valve OFF this is located just above the ‘dump’ on the pipework.</p>
+
+<p>All the ‘dumps’ in the chamber should be serviced at the very least once a year, they need to be stripped down to the last piece and all the ‘O’ rings replaced, the moving parts lubricated with silicone oil/grease (crystallube) The large diaphragm needs to be inspected for profile, the oxygen makes the ‘Nitrile’ grow, if this has taken place the replacement of the diaphragm into the ‘dump is almost impossible. Lastly the corrugated hose requires to be inspected for damaged and ‘ageing’. The ‘O’ ring on the pvc. Tube needs to be replaced annually or oxygen will leak into the chamber during use.</p>
+
+<p>One last item, when the L.B. 78 Overboard Dump is fitted in the system it’s essential that the patients mask is fitted with a non-return valve, if this isn’t done then the patient will breath in more ‘air’ then ‘oxygen’. The safety feature in the rear of the dump is the mushroom flap valve, this is where the air will enter the system.</p>
+
+<h2 id="scott-exhaust-valve">Scott Exhaust Valve.</h2>
+
+<p>The Scott Exhaust Valve is manufactured by the Americans and is the most successful dump, easy to install almost maintenance free and the internal working parts go on for ever, It works on exactly the same principal as the Comex pro but better, this unit will last for years. Servicing the ‘Scott’ use the same lubricants as used on the Comex pro. Make sure that the conical spring is correctly seated.</p>
+
+<h2 id="demand-valves">Demand Valves.</h2>
+
+<p>The Drager Demand Valve and the Scott Demand Valve work in exactly the same way, both have ‘tilt valves’ &amp; ‘LP Seats, the only difference is the Drager can be repaired on site quite cheaply where’s the Scott is repaired by replacement, this makes the Scott the more expensive of the two. The working pressures of both valves are different, the Drager Valve has a working pressure of 110psi. the Scott Valve has a working pressure of 65 psi + 15 psi over ambient, so the valve is set to 80psi and this will cover the range required for all M.S. &amp; C.P. Chambers.</p>
+
+<p>The Scott Valve comes fitted with a free flow device as standard; the Drager can be fitted with the same device.</p>
+
+<h2 id="pipe-specifications">Pipe Specifications.</h2>
+
+<p>The Oxygen rubber pipe that comes from the chamber wall to the Demand Valve is manufactured to a very high standard. The Standard is EN559. It is both Abrasion and Weather Resistant, the branding on the outside of the pipe will read (on the latest piping) EN559 2 Mpa (20bar) Size DH year of Manufacture. The reinforcement of the pipe is High Tensile Synthetic Textile Plies. The Safety Factor is rated at 3:1 Minimum. The WP. 20 Bar. (300psi) the BP. 60 bar. (900 psi)</p>
+
+<h2 id="chamber-seating">Chamber Seating.</h2>
+
+<p>The seating in the chambers has come on since the first one was made, All seats fitted are High Backed with Armrests so that the patient can relax and get the best from the treatment. Also seat belts can be fitted if required this will prevent the patient falling from the chair. The seating should be inspected on each service and all nuts and bolts checked of security, it is the centres duty to keep the seating up to a high standard as the patient uses the chair for at least 1.5 hrs. each dive.</p>
+
+<h2 id="silencers">Silencers.</h2>
+
+<p>The colourful plastic silences inside the chamber are very important in reducing the noise of the air during an ascent or dive, without these being fitted the noise would be unbearable, these silences do become blocked and require replacing, otherwise they will restrict air flow and could become a hazard. When the internal pressure to blow through them is greater then 3 to 4psi. time to change.</p>
+
+<h2 id="sight-glasses-and-ports">Sight Glasses and Ports.</h2>
+
+<p>The sight glasses and ports are to be checked for serviceability, ie. Cracking or distortion and that the internal bolts are secure, A full test by pressurising the chamber until the pressure relief valve lifts then check for any leaks from the gaskets. This test is always recorded on the service sheet. The rubber gaskets should be checked / replaced every 10-12 years. The glass ports are toughened glass and pressure designed to withstand 165 fhsw as we use glass and not acrylic the glasses always remain the same size for life, the acrylic lenses tend to ‘grow’ in diameter and then make groaning noises during diving operations, this noise tends to worry the patients and the centre personal, it can be corrected.</p>
+
+<h2 id="the-hy-lift-safety-relief-valve">The Hy-lift Safety Relief Valve.</h2>
+
+<p>This Valve has been designed by National Vulcan and is very successful relief valve, the valve is designed to slowly lift until the pressure reaches the full lift point where the valve will spring wide and discharge the air pressure faster then it can be introduced to the pressure vessel. The air pressure will fall quickly until the valve will then snap shut and seal it’s self. The full lift pressure is recorded on the service sheet every time a full service is carried out.</p>
+
+<h2 id="the-water-sprinkler-head">The Water Sprinkler Head.</h2>
+
+<p>The Sprinkler Head is mounted in the centre of the dishend inside the chamber. In the event of a chamber fire the water discharged via this head will strike the chamber wall approx 2” above the weld seam, all the patients would be soaked to the skin in approx 10 seconds.</p>
+
+<h2 id="the-internal-lighting">The Internal Lighting.</h2>
+
+<p>The Internal Lighting is located in the roof of the chamber or mounted high on the chamber wall, it is 2 x SP 279 lights producing between the pair 150 Watts of light using approx 14 Watts actual. The lighting controls terminate at the control panel.</p>
+
+<h2 id="the-construction-spec">The construction spec.</h2>
+
+<p>The Bulkhead Light 279 -IP65. Butyl Rubber Body with Polycarbonate Dome. The 2 x PL 7 Watt lamps produce 75 Watts of light with a burn time of 4000 hrs approx.</p>
+
+<p>The Protection. IP68. With a Max pressure of 4 ats.</p>
+
+<p>The Conduit Standard flexible PVC. Conduit IP65 resistant to Water / Dust /Self extinguishing UL94VO. Temperature range:-15 to 65 degrees. Crush resistant to BS 4607. UV resistant.</p>
+
+<p>The Cable Manufactured to BS 6500. 1.5mm 15 Amp BICC.</p>
+
+<p>During a service the Bowls are removed and polished clean, checked for cracks and ageing, the two PL. tubes must be replaced or they will not last a further year in service. No. 84 tubes should be used for brightness.</p>
+
+<p>It has been proven that the lighting control gear has a working life and it has been decided that the control gear will be replaced at five-year intervals; this will take place during a full service of the system.</p>
+
+<p>The complete Internal Lighting System has been inspected and passed by the H&amp;SE in 2000. Providing the system is inspected on annual bases they cannot foresee any ensuing problems. Also the system can be upgraded if required during any service.</p>
+
+<h2 id="the-internal-cooling-fans">The Internal Cooling Fans.</h2>
+
+<p>The Cooling Fans are mounted on the wall or Portholes inside the chamber;</p>
+
+<p>12 volts DC power them. Which means that the motor is two magnets attracting to each other on rotation, this makes the Fan unit intrinsically safe, all the wiring is made to BS 6500. And is earthed at source.</p>
+
+<p>The fans can be set to oscillate on a continuous setting or fixed into one direction at the flick of a switch, it’s the patients choice.</p>
+
+<p>The Power Pack that runs them is located behind the control panel, 240 volt fused 3 amp AC. Being turned into 12volts DC. To run the units. The switches that control the fans are located on the control panel and managed by the operator.</p>
+
+<p>The wiring of the fans albeit 12 volts must be inspected on a daily/weekiy bases to ensure that the ‘joins1 in the wires, (the Lucar connectors) are covered by the silicone see through covers, if the bare copper ends come into contact with the chamber wall the fan will be damaged internally by shorting out back to the Power Pack, this is the job of the chamber operator to inspect the system.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 MS Therapy Centre Lothian. All rights reserved. <br />
+ Site last generated: May 16, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

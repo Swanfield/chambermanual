@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>The Oxygen System | MS Therapy Centre Lothian Manuals</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> MS Therapy Centre Lothian Manuals</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="m4c_introduction.html">Chamber Manual</a></li>
+                        
+                        
+                        
+                        <li><a href="theme_introduction.html">Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Original Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Swanfield@github.com?subject=MS Therapy Centre Lothian Manuals feedback&body=I have some feedback about the The Oxygen System page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The Oxygen System">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Chamber Manual 1.0</li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Introduction</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Oxygen System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Compressor and Air System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Chamber</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Facemasks</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Control Panel</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Water Deluge System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Conclusion</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The Oxygen System</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/Swanfield/manuals/blob/gh-pages/pages/chamber_manual/m4c_the_oxygen_system.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+  <h2 id="the-oxygen-system">The Oxygen System</h2>
+
+<p>The start of the system can begin with either the HP. Cylinder or the LOX. (liquid oxygen.) Tank.</p>
+
+<p>The difference between the two systems is pressure of the supplied gas. The ‘J’ type cylinder comes to the centre with approx 1800 psi. of Oxygen pressure and the amount is 6800.Ltrs. weight of the cylinder is 152 lbs.(68.9kg.) empty.</p>
+
+<p>The LOX. Comes into the centre from either a large tank located outside the centre, or from one or two LC.200 Mini LOX tanks that can be located within the buildings Oxygen store (these tanks will hold approx 18 cylinders of HP. Oxygen each), this store must have plenty of ventilation, The reason is, if the Oxygen leaks from the vessel it will lie on the floor for quite some time prior to mixing back into the atmosphere. Therefore this could be a potential hazard.</p>
+
+<p>The Oxygen that is supplied from the supplier is clean, the storage vessels sometimes are not clean, this fouling will be moved by the oxygen down the line onto the seats of the regulators and valve seatings, So in the line are Sintered Bronze filters these become blocked and require replacing during servicing of the system.</p>
+
+<p>In some LOX systems it has been found that 50 micron filters had to be fitted to catch all the fouling moving through the system, so if these systems are ignored and the fouling is allowed to build up then this will damage the Demand Valve seating and slow down the oxygen delivery rate. The damaged valve seat will ‘dump’ oxygen into the chamber and the Analyser will detect this making problems for the operator.</p>
+
+<h2 id="murex-racking">Murex Racking.</h2>
+
+<p>This is the racking that the HP. Cylinders are stored in, it consists of very thick walled copper piping (Tested to 425 Bar.) (6375psi) and a number of Non - Return Valves plus pigtails, the seal between the pigtail and the cylinder is obtained by the use of the Bodok Seal. During routine servicing all the NRV’s are stripped and replaced if signs of damage are present, Pigtails are examined for damaged and over bending, the Bodok Seals are all replaced.</p>
+
+<h2 id="main-block">Main Block.</h2>
+
+<p>The main block is located in the centre of the racking, this is the mounting for the oxygen regulator, within the main block will be found the main shut off / on taps, These taps are made from Stainless Steel, in time the S/S shaft cuts the brass block threads and the only repair possible is ‘Replacement’ of the complete block. Leaks will occur around the caps, ONLY ‘nip up’ the cap as over tightening will destroy the PTFE. Liner.</p>
+
+<p>If leaks appear around the base of the tap, where it is secured to the main block, the ‘O’ ring will need to be replaced, these ‘O’ rings are a Murex special size and need to be stocked.</p>
+
+<h2 id="how-to-use-the-oxygen-racking">How to Use the Oxygen Racking.</h2>
+
+<p>The correct use of the Oxygen racking is, at the start of the first dive of the day open all the cylinders on the racking when this has been done the twin control knobs located in the centre of the racking are then the main controls, close down one side using the control knob. This side then becomes your reserve. The open side will be used by the patients and the falling pressure will monitored by the operator at the control panel, bearing in mind the two working pressures for the Demand Valves (Drager &amp; Scott) the (LP.) needle on the Panel will bob up and down during use. Let the pressure drop approximately from 110psi. (Drager) to say 80 psi then OPEN the second control valve (reserve) the pressure returns to full working pressure and the used cylinders can then be closed and replaced with full cylinders. The reason for using this method is so ALL cylinders are returned to BOC empty and not with useable oxygen still contained inside the cylinder.</p>
+
+<p>Remember any ‘J’ cylinders containing say 300psi. of oxygen will keep one patient breathing for approximately 15mins, a bank of cylinders will keep 3 or 4 patients happy for half a dive, so don’t be to hasty to replace the cylinders, get your money’s worth from them, BOC doesn’t give refunds.</p>
+
+<h2 id="the-oxygen-regulator">The Oxygen Regulator.</h2>
+
+<p>This particular type of regulator is used on the Murex Racking as the ‘outgoing’ pressure can be set to 1000 psi. if required, it is normally set at 500 psi. (Do not fit BOC Saffire as the ‘outgoing1 pressure is insufficient) This is so the main oxygen pipe acts as a storage to the Control Panel but also limits the amount of oxygen within the building, in the event of a fire in the centre the oxygen content is very small.</p>
+
+<p>Any other regulator that is fitted to replace the 7000 Series. Never has the correct ‘outgoing’ pressure, this will effect the amount of Oxygen that the patients receive, in some cases insufficient oxygen was provided and the patients failed to get any benefit.</p>
+
+<p>Servicing of the 7000 series regulator, the unit must be stripped right down and cleaned using ‘trie’ or some other cleaner, this will remove any oil based fouling, all ‘O’ rings are to be replaced and the ‘cone’ filter in the bullnose mounting. Lubricate using Silicone oil or (Crystallube) only. Reassemble and return it to the main block, tighten down then check for any leaks.</p>
+
+<h2 id="copper-piping">Copper Piping.</h2>
+
+<p>On the HP. Systems 3/8 bore piping is adequate in size to supply all the patients needs, If the centre changes over to LP. Oxygen then the pipe ID. Must be increased to make sure that there will be sufficient oxygen readily available for the patients needs. In the use of LOX the pipe size should be increased to 22mm right up to the back of the panel.</p>
+
+<p>All copper pipe used is manufactured to BS. 2871 Pt. 1. Table X. and the quality systems in accordance with EN 29002/ISO 9002.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 MS Therapy Centre Lothian. All rights reserved. <br />
+ Site last generated: May 16, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

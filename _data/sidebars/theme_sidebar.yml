@@ -19,37 +19,21 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: Getting Started
     output: web, pdf
     folderitems:
 
     - title: Introduction
       url: /theme_introduction.html
       output: web, pdf
-
-    - title: Get started
-      url: /theme_index.html
-      output: web, pdf
       type: homepage
 
-    - title: About the theme author
-      url: /theme_about.html
+    - title: Setup The Software
+      url: /theme_index.html
       output: web, pdf
 
-    - title: Support
-      url: /theme_support.html
-      output: web, pdf
-
-  - title: The Software
-    output: web, pdf
-    folderitems:
-
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /theme_about_ruby_gems_etc.html
-      output: web, pdf
-
-    - title: Jekyll on Windows
-      url: /theme_install_jekyll_on_windows.html
+    - title: Starting s New Document
+      url: /theme_new_pages.html
       output: web, pdf
 
   - title: Authoring
@@ -255,29 +239,41 @@ entries:
         subfolderitems:
 
         - title: Formatting pages
-          url: /tag_formatting.html
+          url: /theme_tag_formatting.html
           output: web
 
         - title: Navigation pages
-          url: /tag_navigation.html
+          url: /theme_tag_navigation.html
           output: web
 
         - title: Content types pages
-          url: /tag_content_types.html
+          url: /theme_tag_content_types.html
           output: web
 
         - title: Publishing pages
-          url: /tag_publishing.html
+          url: /theme_tag_publishing.html
           output: web
 
         - title: Special layout pages
-          url: /tag_special_layouts.html
+          url: /theme_tag_special_layouts.html
           output: web
 
         - title: Collaboration pages
-          url: /tag_collaboration.html
+          url: /theme_tag_collaboration.html
           output: web
 
         - title: Troubleshooting pages
-          url: /tag_troubleshooting.html
+          url: /theme_tag_troubleshooting.html
           output: web
+
+  - title: The Software
+    output: web, pdf
+    folderitems:
+
+    - title: About Ruby, Gems, Bundler, etc.
+      url: /theme_about_ruby_gems_etc.html
+      output: web, pdf
+
+    - title: Jekyll on Windows
+      url: /theme_install_jekyll_on_windows.html
+      output: web, pdf

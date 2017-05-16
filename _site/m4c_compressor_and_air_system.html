@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>The Compressor and Air System | MS Therapy Centre Lothian Manuals</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> MS Therapy Centre Lothian Manuals</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jekyll Resources<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://github.com/tomjohnson1492/documentation-theme-jekyll" target="_blank">Github Repo</a></li>
+                        
+                        
+                        
+                        <li><a href="https://talk.jekyllrb.com" target="_blank">Jekyll Talk</a></li>
+                        
+                        
+                        
+                        <li><a href="http://jekyllrb.com/docs/home/" target="_blank">Jekyll documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="http://stackoverflow.com/questions/tagged/jekyll" target="_blank">Jekyll on Stack Overflow</a></li>
+                        
+                        
+                        
+                        <li><a href="http://idratherbewriting.com/category-jekyll/" target="_blank">Jekyll on my blog</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="m4c_introduction.html">Chamber Manual</a></li>
+                        
+                        
+                        
+                        <li><a href="theme_introduction.html">Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="mydoc_introduction.html">Original Theme Documentation</a></li>
+                        
+                        
+                        
+                        <li><a href="p1_landing_page.html">Product 1</a></li>
+                        
+                        
+                        
+                        <li><a href="p2_landing_page.html">Product 2</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Swanfield@github.com?subject=MS Therapy Centre Lothian Manuals feedback&body=I have some feedback about the The Compressor and Air System page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="The Compressor and Air System">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle">Chamber Manual 1.0</li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Introduction</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Oxygen System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Compressor and Air System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Chamber</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Facemasks</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Control Panel</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">The Water Deluge System</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+    
+    <li>
+        <a href="#">Conclusion</a>
+        <ul>
+            
+        </ul>
+     </li>
+       
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">The Compressor and Air System</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" href="https://github.com/Swanfield/manuals/blob/gh-pages/pages/chamber_manual/m4c_compressor_and_air_system.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    
+
+  <h2 id="the-compressor--the-air-receiver-tank">The Compressor &amp; the Air Receiver Tank.</h2>
+
+<h3 id="types-of-compressors">Types of compressors.</h3>
+
+<p>The types of compressors that can be used are as follows:- 
+ Reciprocal,
+ Sliding Vane or 
+ Screw.</p>
+
+<p>Reciprocal compressors are noisy, old fashioned and make a lot of vibration, but do tend to run for years, During every service the oil has to be changed, this is to remove the oil contamination from the moving parts.</p>
+
+<p>The Sliding Vane is the Hydrovane designed compressor, a continuously running machine, quiet (65db) no vibration, this machine will run on the same oil for 2000 hours, (it likes to run) it can be either single phase or three phase, Three phase motors will produce bigger compressors with more air output. The 501 &amp; 502 units must be allowed to run for at least 25 mins each time they are started or the operator will find the oil becoming emulsified.</p>
+
+<p>Screw compressors are usually fully silenced housed in module boxes, these machines are higher priced then the others but well worth the money. Again the oil can be used over &amp; over again for 2000 running hours. These compressors are small in physical size but very high in Air output. The Screw compressor usually costs more then the other two types.</p>
+
+<p>What ever type of compressor the centre decides to purchase, check with the installer of the equipment to ensure that the output pressure of the compressor is compatible with the system.</p>
+
+<p>In all cases, any maintenance of the compressor, the manufactures handbook must be used for guidance for spare parts and specifications on lubricants and torque loadings.</p>
+
+<h2 id="pressure-switch">Pressure Switch.</h2>
+
+<p>The pressure switch is the ‘brain’ that turns the compressor on /off. This piece of equipment is designed to operate at two set pressures. Low pressure being the time to switch the compressor on, when working pressure is reached it will switch the compressor off. This will make the compressor fully automatic, so it can be safely left switch ON at all times.</p>
+
+<p>All the mains cables entering this unit must be fully insulated and tight on the terminals, the earthing must be 100% correct using the right size earth wire (10mm) Any broken cable fittings must be replaced at once.</p>
+
+<p>A visual inspection of the complete cable run must be carried out during every service, or at least once a year. This is one of items that the inspection services are very ‘hot’ on.</p>
+
+<h2 id="the-pressure-relief-valve">The Pressure Relief Valve.</h2>
+
+<p>The pressure relief valve is a vital safety feature for the Receiver Tank, this valve must be inspected on every service, cleaned and exercised to ensure freedom of movement. Any faults found MUST be dealt with immediately.</p>
+
+<h2 id="pressure-gauge">Pressure Gauge.</h2>
+
+<p>The pressure gauge is fitted to the Air Receiver to show if the vessel has pressure inside of it. This is a safety feature for the engineer that is going to work on it. So once again if it is found to be defective, it must be replaced as soon as possible.</p>
+
+<h2 id="air-receiver-tank">Air Receiver Tank.</h2>
+
+<p>The Air Receiver Tank will be either a horizontal mounted or vertical standing vessel, holding approx 1000 plus Itrs. Of cold stored air. It will be constructed to BS5169, 1992, Class 111, Grade ‘E’</p>
+
+<p>It is best if the tank could stand outside the building in the fresh air, this will ensure the low temperature of the stored air, this will add to the patients comfort when the dive is taking place.</p>
+
+<p>The tank must be kept in a good state of repair, ie. Painted and free from rust, the tank will be inspected every two years by the Insurance company, this will be an internal inspection and metal thickness test. Any deterioration of the tank could mean its replacement by a new vessel. Remember the size of the Air Receiver is very important, the bigger the better, it’s cheaper to buy a Receiver Tank then a compressor and it’s the storage of cold air that’s important to the patients, not how fast you can replace it with the size of the compressor.</p>
+
+<h2 id="the-drain-tap">The Drain Tap.</h2>
+
+<p>The Drain Tap located at the base of the Air Receiver, this tap is for the draining off of water, this water is made by the compressor during the making of compressed air, the water must be drained off daily if possible, but once a week is the longest that it can be left. If the tank has a lot of water inside of it this will be moved down the line to the Air Filters, this will shorten the elements life, remember if the tank has a lot of water in it there’s no room for the Air.</p>
+
+<p>When draining the water off, open the tap very very slowly, when the water starts to flow stop opening the valve, wait until the water stops and the air starts to come out, Close the tap.</p>
+
+<h2 id="air-filters--the-regulators">Air Filters &amp; the Regulators.</h2>
+
+<h3 id="types-of-air-filters">Types of Air Filters.</h3>
+
+<p>The types of Medical breathing filters that are being used in the M.S. Centres around Gt. Britain are as follows:-</p>
+
+<p>Domnick Hunter, Compair Broomwade, Ultra Filter, Norgren, Asco- Joucomatic to name but a few, they all work the same, filtering out the impurities from the air that the patients are breathing inside the chamber. Remember the air inside the Air Receiver cannot be breathed until it has been filtered. It is required that the filters have three bowls attached to them, ie. Pre-filter, Coalescing filter, Carbon filter. This makes for Breathing Air Filters, No other configuration of filters is acceptable.</p>
+
+<p>Pre - Element Filter, this filter removes the solids and water from the air plus some oil.
+ Coalescing Filter, this filter removes the remaining water but mainly oil from the air. (hydrocarbons)
+ Carbon Filter, this filter is located at the end of the line and removes odour from the air making it odourless to the patients inside the chamber.</p>
+
+<p>Mounted at the end of the three filters you will find an Air Regulator, this piece of equipment regulates the air pressure being released from the Air Receiver, it will be at the same pressure as the optimum working pressure of the Oxygen demand valves.</p>
+
+<p>This will ensure that in the event of a fire the Air /Oxy change over will go unnoticed by the patients.</p>
+
+<p>In the base of each filter bowl is mounted an Air Auto Drain, this little unit will dump the build up of water inside the bowl as and when it reaches a certain level, this ensures that the elements will work in the best environment to prolong their working life. Temperature plays a big part in prolonging their working life, ie. Keep them cold.</p>
+
+<p>To get the best from your filters, ensure that the filters are large in size* this will guarantee maximum air movement and long life.</p>
+
+<h3 id="the-life-of-yourfilters-">The life of yourfilters:-</h3>
+
+<p>Pre-filter element, This element will last quite a long time as the air flow through the Mesh is unrestricted, so it could last several years.
+ Coalescing Element. This element is the main workhorse of the system it filters out most of the impurities its working life is governed by the air flow through it, this will be either 6000 hrs. or when it takes between 6 to 10 psi. to blow through it, one year in the system or when the sponge on the element is socked with oil.
+ Carbon Element. This element removes oil vapour and or odours using an activated Carbon its life is very similar to the Coalescing element as they work hand in glove.</p>
+
+<p>Because the air system is interconnected with the Oxygen system, in the event of a fire or the use of the Air/Oxy lever being used during treatment, if the filters are not up to standard then the patients will breath in the HYDROCARBON VAPOURS” and this would aggravate the patients problems, also in extreme cases where the filter system has reached saturation point and the elements still have not been changed, oil has been seen running down the chamber wall. If the Air/Oxy lever had been used, oxygen would have been introduced into the airline with dramatic results.</p>
+
+<h2 id="molykote">Molykote.</h2>
+
+<p>All the threads on the elements and the filter bowls should be lubricated using a grease that is compatible with breathing air, that grease is Molykote 33 medium this grease consists of Silicone Oil, Lithium Soap and conforms to ISO 2137 260-300 this grease has good oxidation stability low evaporation rate = long term / lifetime lubrication, DN value 350.000 and the temperature range is -73 to +180 degrees C. it prevents rust from forming on the steel threads and aids in the assembly and servicing of the Air Filters.</p>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2017 MS Therapy Centre Lothian. All rights reserved. <br />
+ Site last generated: May 16, 2017 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

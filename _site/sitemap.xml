@@ -776,6 +776,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/theme_new_pages.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/theme_no_password_prompts_scp.html</loc>
   </url>
   
@@ -892,6 +898,28 @@
   <url>
     <loc>http://localhost:4000/theme_tag_archives_overview.html</loc>
   </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
