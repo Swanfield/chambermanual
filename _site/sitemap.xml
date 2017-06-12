@@ -34,6 +34,54 @@
   
   
   <url>
+    <loc>http://localhost:4000/m4c_compressor_and_air_system.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_conclusion.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_facemasks.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_introduction.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_the_chamber.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_the_control_panel.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_the_oxygen_system.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/m4c_the_water_deluge_system.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/mydoc_about.html</loc>
   </url>
   
@@ -560,12 +608,6 @@
   
   
   <url>
-    <loc>http://localhost:4000/theme_about.html</loc>
-  </url>
-  
-  
-  
-  <url>
     <loc>http://localhost:4000/theme_about_ruby_gems_etc.html</loc>
   </url>
   
@@ -734,6 +776,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/theme_new_pages.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/theme_no_password_prompts_scp.html</loc>
   </url>
   
@@ -836,18 +884,6 @@
   
   
   <url>
-    <loc>http://localhost:4000/theme_support.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://localhost:4000/theme_supported_features.html</loc>
-  </url>
-  
-  
-  
-  <url>
     <loc>http://localhost:4000/theme_syntax_highlighting.html</loc>
   </url>
   
@@ -862,6 +898,28 @@
   <url>
     <loc>http://localhost:4000/theme_tag_archives_overview.html</loc>
   </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

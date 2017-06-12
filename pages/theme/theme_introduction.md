@@ -1,11 +1,11 @@
 ---
-title: Introduction
+title: Overview
 sidebar: theme_sidebar
 permalink: theme_introduction.html
 folder: theme
 ---
 
-## Overview
+## Introduction
 
 The MS Therapy Centre Lothian uses the [Jekyll Documentation theme](https://swanfield.github.io/manuals/mydoc_introduction.html) with Github Pages to produce manuals and documentation.
 
@@ -20,13 +20,13 @@ Some of the more prominent features of this theme include the following:
 * Static web pages can be generated and checked before upload to Github,
 * The static pages can be converted to pdf documents for printing,
 * Multi-level sidebar,
-* - Different sidebars for different projects,
+  - Different sidebars for different projects,
 * Top navigation bar with drop-down menus,
 * Notes, tips, and warning information notes,
 * Tags for alternative navigation,
 * Advanced landing page layouts from the [Modern Business theme](http://startbootstrap.com/template-overviews/modern-business/).
 
-## Introduction to How it Works
+## How it Works
 
 Easily produce nice looking documentation by:
 
@@ -37,8 +37,8 @@ Easily produce nice looking documentation by:
 
 The software does all the hard work to convert the simple text documents into attractive web pages or practical pdf documents.  The caveat is that the user needs to learn a specific work flow to create and generate these pages.
 
-## Getting started
+## Get Setup
 
-To get started, see [Getting Started][theme_index].
+To get setup, see [Setup The Software][theme_index].
 
 {% include links.html %}
