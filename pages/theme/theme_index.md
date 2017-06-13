@@ -37,13 +37,28 @@ At the time of writing, copy and paste this to the command line (with administra
 ```
 
 
+### Install a text editor
+
+Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  [Sublime Text](https://www.sublimetext.com/) is a commonly recommended editor which can be downloaded with an unlimited free trial but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.
+
+Download Sublime Text 3 from here: https://www.sublimetext.com/3 or:
+
+```shell
+choco install sublimetext3.packagecontrol -y
+```
+
+
+
 ### Install Ruby for Windows and Ruby Development Kit
 
 At the command line enter:
 
 ```shell
-choco install ruby ruby2.devkit -y
+choco install ruby -y --version 2.3.0
+choco install ruby2.devkit -y
 ```
+
+(I haven't been able to get Ruby 2.4 to work with this theme.)
 
 You now need to initialise and install the Ruby Development Kit.
 
@@ -52,21 +67,16 @@ cd C:\tools\DevKit2
 ruby dk.rb init
 ```
 
-Now edit config.yml in the DevKit2 directory and add the following at the bottom if it isn't already there.:
+Now edit config.yml in the DevKit2 directory (using Sublime Text that you installed earlier) and add the following at the bottom if it isn't already there.:
 
 ```shell
  - C:/tools/ruby23
 ```
-
-### Install Git for Windows
-
-You can pick anyone of the following or all three:
+Then finish the install
 
 ```shell
-choco install git.install tortoisegit -y
-choco install github 
+ruby dk.rb install
 ```
-I have not used [GitHub Desktop](https://desktop.github.com/), and have not been able to install it with chocolatey, so will not document it here until I have.
 
 
 ### Install Bundler and Jekyll
@@ -79,15 +89,16 @@ At the command line enter (you will need to open a new window):
 gem install bundler jekyll
 ```
 
-### Install a text editor
 
-Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  [Sublime Text](https://www.sublimetext.com/) is a commonly recommended editor which can be downloaded with an unlimited free trial but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.
+### Install Git for Windows
 
-Download Sublime Text 3 from here: https://www.sublimetext.com/3 or:
+You can pick anyone of the following or all three:
 
 ```shell
-choco install sublimetext3.packagecontrol -y
+choco install git.install tortoisegit -y
+choco install github 
 ```
+I have not used [GitHub Desktop](https://desktop.github.com/), and have not been able to install it with chocolatey, so will not document it here until I have.
 
 
 
@@ -339,9 +350,13 @@ git checkout master
 
 As we don't plan to work on the gh-pages branch please ensure that it is the last branch that you have checked out.
 
+
+
 ## View Your Documents Locally Before You Push
 
 You can view your documents, and any changes that you have made to them on your own computer before you commit them and/or push them to GitHub.  This is actually a very good idea as even a small typo will cause you to make another edit, another commit, and another push.  GitHub will only build the website a limited number of times a day for you so it is best practice to check your changes before you commit (and especially before you push).
+
+
 
 ### Bundler
 
@@ -370,6 +385,7 @@ You will now be able to view your documentation at:
 If you are using an editor that allows you to preview Markdown files then you will see between this theme and Jekyll (the application GitHub and Bundler use to generate the webpages), your changes might not appear exactly as you had expected.
 
 If you need to make changes then you will need to stop the jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.
+
 
 ### How it works
 

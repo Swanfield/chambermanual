@@ -32,7 +32,11 @@ entries:
       url: /theme_index.html
       output: web, pdf
 
-    - title: Starting s New Document
+    - title: Editing an Existing Manual
+      url: /theme_existing_pages.html
+      output: web, pdf
+
+    - title: Starting a New Manual
       url: /theme_new_pages.html
       output: web, pdf
 

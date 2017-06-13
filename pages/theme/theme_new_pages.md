@@ -1,11 +1,11 @@
 ---
-title: Starting a New Document
-keywords: sample homepage
+title: Starting a New Manual
+keywords: New Manual
 tags: [new_pages]
 sidebar: theme_sidebar
 permalink: theme_new_pages.html
 folder: theme
-summary: How to start creating your new documentation.
+summary: How to start creating a new manual.
 ---
 
 ## Configure the sidebar
