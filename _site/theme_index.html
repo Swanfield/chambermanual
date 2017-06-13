@@ -264,7 +264,14 @@
             
             
             
-            <li><a href="theme_new_pages.html">New Pages</a></li>
+            <li><a href="theme_existing_pages.html">Editing an Existing Manual</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="theme_new_pages.html">Starting a New Manual</a></li>
             
             
             
@@ -787,13 +794,26 @@ $('#toc').on('click', 'a', function() {
 </code></pre>
 </div>
 
+<h3 id="install-a-text-editor">Install a text editor</h3>
+
+<p>Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  <a href="https://www.sublimetext.com/">Sublime Text</a> is a commonly recommended editor which can be downloaded with an unlimited free trial but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.</p>
+
+<p>Download Sublime Text 3 from here: https://www.sublimetext.com/3 or:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>choco install sublimetext3.packagecontrol -y
+</code></pre>
+</div>
+
 <h3 id="install-ruby-for-windows-and-ruby-development-kit">Install Ruby for Windows and Ruby Development Kit</h3>
 
 <p>At the command line enter:</p>
 
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>choco install ruby ruby2.devkit -y
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>choco install ruby -y --version 2.3.0
+choco install ruby2.devkit -y
 </code></pre>
 </div>
+
+<p>(I haven’t been able to get Ruby 2.4 to work with this theme.)</p>
 
 <p>You now need to initialise and install the Ruby Development Kit.</p>
 
@@ -802,9 +822,24 @@ ruby dk.rb init
 </code></pre>
 </div>
 
-<p>Now edit config.yml in the DevKit2 directory and add the following at the bottom if it isn’t already there.:</p>
+<p>Now edit config.yml in the DevKit2 directory (using Sublime Text that you installed earlier) and add the following at the bottom if it isn’t already there.:</p>
 
 <div class="language-shell highlighter-rouge"><pre class="highlight"><code> - C:/tools/ruby23
+</code></pre>
+</div>
+<p>Then finish the install</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>ruby dk.rb install
+</code></pre>
+</div>
+
+<h3 id="install-bundler-and-jekyll">Install Bundler and Jekyll</h3>
+
+<p>At the command line enter (you will need to open a new window):</p>
+
+<p><strong>NB</strong> Your firewall might throw up a warning about the the software connecting to the internet.  You have to click OK fairly promptly or it will time out and you will have problems getting it to work again.</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>gem install bundler jekyll
 </code></pre>
 </div>
 
@@ -817,26 +852,6 @@ choco install github
 </code></pre>
 </div>
 <p>I have not used <a href="https://desktop.github.com/">GitHub Desktop</a>, and have not been able to install it with chocolatey, so will not document it here until I have.</p>
-
-<h3 id="install-bundler-and-jekyll">Install Bundler and Jekyll</h3>
-
-<p>At the command line enter (you will need to open a new window):</p>
-
-<p><strong>NB</strong> Your firewall might throw up a warning about the the software connecting to the internet.  You have to click OK fairly promptly or it will time out and you will have problems getting it to work again.</p>
-
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>gem install bundler jekyll
-</code></pre>
-</div>
-
-<h3 id="install-a-text-editor">Install a text editor</h3>
-
-<p>Any text editor that can handle UTF-8 encoded text files is recommended (unfortunately this does not include Notepad).  There are many free editors and IDEs that can be used.  <a href="https://www.sublimetext.com/">Sublime Text</a> is a commonly recommended editor which can be downloaded with an unlimited free trial but a license must be bought for continued use.  At the moment, I am going to suggest trying it out.</p>
-
-<p>Download Sublime Text 3 from here: https://www.sublimetext.com/3 or:</p>
-
-<div class="language-shell highlighter-rouge"><pre class="highlight"><code>choco install sublimetext3.packagecontrol -y
-</code></pre>
-</div>
 
 <h2 id="set-up-git">Set up Git</h2>
 
@@ -884,7 +899,7 @@ choco install github
     <p><a href="https://help.github.com/articles/adding-an-email-address-to-your-github-account/">Link the email address to your GitHub account</a>, so that your commits can be attributed to you and displayed in your contributions graph.</p>
   </li>
   <li>
-    <p>Ensure that you commit Unix style line endings.  Windows uses different characters for line endings than Unix does but most web servers run on Unix so it is good to ensure that your commits are Unix friendly.</p>
+    <p>Ensure that you commit Unix style line endings.  Windows uses different characters for line endings to Unix but most web servers run on Unix so it is good to ensure that your commits are Unix friendly.</p>
 
     <div class="language-shell highlighter-rouge"><pre class="highlight"><code>git config --global core.autocrlf input
 </code></pre>
@@ -1181,7 +1196,7 @@ git checkout master
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 MS Therapy Centre Lothian. All rights reserved. <br />
- Site last generated: May 16, 2017 <br />
+ Site last generated: Jun 13, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

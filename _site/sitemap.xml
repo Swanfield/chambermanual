@@ -680,6 +680,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/theme_existing_pages.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/theme_faq_layout.html</loc>
   </url>
   
