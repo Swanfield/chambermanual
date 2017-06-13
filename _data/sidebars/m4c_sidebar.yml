@@ -26,6 +26,7 @@ entries:
   - title: Introduction
     url: /m4c_introduction.html
     output: web, pdf
+    
     - title: Introduction
       url: /m4c_introduction.html
       output: web
