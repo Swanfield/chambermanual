@@ -1134,6 +1134,17 @@
 
 
 {
+"title": "Command Line Shortcuts for Git Bash",
+"tags": "",
+"keywords": "",
+"url": "pagesthemetheme_command_line_shortcuts.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Commenting on files",
 "tags": "navigation",
 "keywords": "annotations, comments, feedback",
@@ -1645,6 +1656,17 @@
 "keywords": "trouble, problems, support, error messages, problems, failure, error,",
 "url": "theme_troubleshooting.html",
 "summary": "This page lists common errors and the steps needed to troubleshoot them."
+}
+,
+
+
+
+{
+"title": "Using Git",
+"tags": "getting_started",
+"keywords": "Using Git",
+"url": "theme_using_git.html",
+"summary": "How to use Git with this theme."
 }
 ,
 

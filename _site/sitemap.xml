@@ -656,6 +656,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/pages/theme/theme_command_line_shortcuts.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/theme_commenting_on_files.html</loc>
   </url>
   
@@ -943,6 +949,12 @@
   
   <url>
     <loc>http://localhost:4000/theme_troubleshooting.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/theme_using_git.html</loc>
   </url>
   
   

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="keywords" content=" ">
-<title>Troubleshooting pages | MS Therapy Centre Lothian Manuals</title>
+<meta name="description" content="How to use Git with this theme.">
+<meta name="keywords" content="getting_started,  Using Git">
+<title>Using Git | MS Therapy Centre Lothian Manuals</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -178,7 +178,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Swanfield@github.com?subject=MS Therapy Centre Lothian Manuals feedback&body=I have some feedback about the Troubleshooting pages page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:Swanfield@github.com?subject=MS Therapy Centre Lothian Manuals feedback&body=I have some feedback about the Using Git page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -196,7 +196,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Troubleshooting pages">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Using Git">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -264,7 +264,7 @@
             
             
             
-            <li><a href="theme_using_git.html">Using Git</a></li>
+            <li class="active"><a href="theme_using_git.html">Using Git</a></li>
             
             
             
@@ -683,7 +683,7 @@
                     
                     
                     
-                    <li class="active"><a href="theme_tag_troubleshooting.html">Troubleshooting pages</a></li>
+                    <li><a href="theme_tag_troubleshooting.html">Troubleshooting pages</a></li>
                     
                     
                     
@@ -738,13 +738,15 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Troubleshooting pages</h1>
+   <h1 class="post-title-main">Using Git</h1>
 </div>
 
 
 
 <div class="post-content">
 
+   
+    <div class="summary">How to use Git with this theme.</div>
    
 
     
@@ -775,709 +777,173 @@ $('#toc').on('click', 'a', function() {
 
     
 
-    <a target="_blank" href="https://github.com/Swanfield/manuals/blob/gh-pages/pages/tags/theme_tag_troubleshooting.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/Swanfield/manuals/blob/gh-pages/pages/theme/theme_using_git.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
 
     
 
-  <p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">troubleshooting</button></p>
-<table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
-    <tbody>
-    
-  
-    
-   
-    
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-        
+  <h2 id="git-and-the-repository">Git and The Repository</h2>
 
-        <tr><td><a href="mydoc_about_ruby_gems_etc.html">About Ruby, Gems, Bundler, and other prerequisites</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> Ruby is a programming language you must have on your computer in order to build Jekyll locally. Ruby has various gems (or plugins) that provide various funct... </td>
-        </tr>
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
+<h3 id="what-is-git">What is Git?</h3>
 
-        <tr><td><a href="mydoc_install_jekyll_on_mac.html">Install Jekyll on Mac</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> Installation of Jekyll on Mac is usually less problematic than on Windows. However, you may run into permissions issues with Ruby that you must overcome. You... </td>
-        </tr>
-        
-     
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
+<p>So, we have spent all this time setting up Git so that it will work with GitHub but what exactly is Git?</p>
 
-        <tr><td><a href="mydoc_no_password_prompts_scp.html">Getting around the password prompts in SCP</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> You can publish your docs via SSH through a Terminal window or more likely, via a shell script that you simply execute as part of the publishing process. How... </td>
-        </tr>
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
+<p>Git is a version control system which allows a team of people to work together, all using the same files. It helps the team cope with the confusion that tends to happen when multiple people are editing the same files.</p>
 
-        <tr><td><a href="mydoc_support.html">Support</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> Contact me for any support issues. </td>
-        </tr>
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
+<p>Git is very sophisticated but we are using it in a very simple way: <em>to download and upload files contained in our repository.</em></p>
 
-        <tr><td><a href="mydoc_troubleshooting.html">Troubleshooting</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> This page lists common errors and the steps needed to troubleshoot them. </td>
-        </tr>
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-        
+<h4 id="initial-work-flow">Initial Work Flow</h4>
 
-        <tr><td><a href="theme_about_ruby_gems_etc.html">About Ruby, Gems, Bundler, and other prerequisites</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> Ruby is a programming language you must have on your computer in order to build Jekyll locally. Ruby has various gems (or plugins) that provide various funct... </td>
-        </tr>
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
+<p>We first:
+- download the repository from GitHub (<strong>clone</strong> the GitHub repository).
+- We then make changes to it (<strong>edit</strong>),
+- save the changes locally to the repository (<strong>commit</strong>),
+- and upload the changes to GitHub (<strong>push</strong>).</p>
 
-        <tr><td><a href="theme_install_jekyll_on_mac.html">Install Jekyll on Mac</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> Installation of Jekyll on Mac is usually less problematic than on Windows. However, you may run into permissions issues with Ruby that you must overcome. You... </td>
-        </tr>
-        
-     
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
+<p>GitHub will update the website automatically.  It is that simple.</p>
 
-        <tr><td><a href="theme_no_password_prompts_scp.html">Getting around the password prompts in SCP</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> You can publish your docs via SSH through a Terminal window or more likely, via a shell script that you simply execute as part of the publishing process. How... </td>
-        </tr>
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-        
-     
-        
-     
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-        
+<h4 id="subsequent-work-flow">Subsequent Work Flow</h4>
 
-        <tr><td><a href="theme_troubleshooting.html">Troubleshooting</a></td>
-            <td><span class="label label-default">Page</span></td>
-          <td> This page lists common errors and the steps needed to troubleshoot them. </td>
-        </tr>
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-        
-     
-   
-    
-        
-     
-   
-    
-   
-    
-   
-    
-   
-    
-   
+<p>When more than two people are working on the same repository then, <em>before they start editing</em>, they download any changes that have been made since the last time the worked on the repository (<strong>pull</strong>).  They can then <strong>edit</strong>, <strong>commit</strong>, and <strong>push</strong> their changes.</p>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+<ul>
+  <li>Doing a pull before doing anything else is very good practice and keeps life simple.</li>
+</ul>
 
-   </tbody>
-</table>
+<h4 id="simultaneous-editing">Simultaneous Editing</h4>
 
+<p>If you have made changes, and someone else has made changes at the same time, then Git allows you to merge them together easily.  Merging, however, is beyond the scope of this document as it should rarely be an issue for a simple repository, with few contributors, like this one.</p>
+
+<h3 id="download-this-repository">Download this Repository</h3>
+
+<p>You will need to download <a href="https://github.com/Swanfield/manuals">this repository</a> from GitHub.</p>
+
+<ol>
+  <li>If you haven’t already, navigate to the parent folder of the git folder you created earlier (~/documents/ i.e. C:\Users\UserName\Documents).</li>
+  <li>Right-click the git folder and select “Git Bash here”</li>
+  <li>
+    <p>If Git has been setup correctly then all you need to do is copy and paste this to the Git Bash window’s command line:</p>
+
+    <p><code class="highlighter-rouge">
+git clone git@github.com:Swanfield/manuals.git
+</code>
+ This will create a manuals folder (~/git/manuals/).</p>
+  </li>
+  <li>
+    <p>Enter the folder:</p>
+
+    <p><code class="highlighter-rouge">
+cd manuals
+</code></p>
+  </li>
+  <li>
+    <p>You can view the contents of the folder at the command line:</p>
+
+    <p><code class="highlighter-rouge">
+ls
+</code></p>
+
+    <p>or, for a more detailed view:</p>
+
+    <p><code class="highlighter-rouge">
+ls -la
+</code></p>
+
+    <p>or you can view it’s contents in the normal way with windows explorer.</p>
+  </li>
+</ol>
+
+<h3 id="branches">Branches</h3>
+
+<p>You will see that there isn’t much there initially.  That is because you are looking at the master branch and we aren’t using it for much at the moment.  The documentation files are all in a special branch, called gh-pages, used specifically by GitHub Pages.</p>
+
+<h4 id="what-are-branches">What are Branches?</h4>
+
+<p>The actual inner workings of Git is not for the faint of heart.  Essentially though git keeps a compressed record of every file - and the changes made to every file - in your repository (this record is kept in the .git folder in every repository). Branches are basically separate repositories that live in the same folder but not at the same time. When you move to one branch from another (checkout a branch) all the files in the repository’s folder are removed and the new branch is created dynamically from git’s compressed record.</p>
+
+<p>You can see this in action now.</p>
+
+<ol>
+  <li>Open the repository’s folder in Windows Explorer.  You will see only a few files and folders.</li>
+  <li>Bring up the Git Bash window and move it so that you can see the contents of the repository’s folder behind it.</li>
+  <li>Now, in the terminal type:
+<code class="highlighter-rouge">
+git checkout gh-pages
+</code></li>
+  <li>You will briefly see all the files from the repository’s master branch disappear and be replaced by all the files from the gh-pages branch (GitHub Pages branch).</li>
+  <li>If you want to see this again you can type:
+<code class="highlighter-rouge">
+git checkout master
+</code></li>
+</ol>
+
+<p>As we don’t plan to work on the gh-pages branch please ensure that it is the last branch that you have checked out.</p>
+
+<h2 id="the-final-setup-steps">The Final Setup Steps</h2>
+
+<h3 id="view-your-documents-locally-before-you-push">View Your Documents Locally Before You Push</h3>
+
+<p>You can view your documents, and any changes that you have made to them on your own computer before you commit them and/or push them to GitHub.  This is actually a very good idea as even a small typo will cause you to make another edit, another commit, and another push.  GitHub will only build the website a limited number of times a day for you so it is best practice to check your changes before you commit (and especially before you push).</p>
+
+<h3 id="bundler">Bundler</h3>
+
+<p>Earlier, we installed <a href="http://bundler.io/">Bundler</a>.  This is the magic sauce that lets us install and run all the software required to view our GitHub Pages website locally on our own computer.</p>
+
+<p>Use Bundler to install all the needed Ruby gems:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bundle install
+</code></pre>
+</div>
+
+<p>Then always use this command to build Jekyll:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre>
+</div>
+
+<p><strong>NB</strong> If this doesn’t work then you probably haven’t installed the Ruby Development Kit correctly which prevents “bundle install” from installing all the required gems.</p>
+
+<p>As this is pretty long, we will create a short alias, called “jserve” for this command later.</p>
+
+<p>You will now be able to view your documentation at:</p>
+
+<p><a href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a></p>
+
+<p>If you are using an editor that allows you to preview Markdown files then you will see between this theme and Jekyll (the application GitHub and Bundler use to generate the webpages), your changes might not appear exactly as you had expected.</p>
+
+<p>If you need to make changes then you will need to stop the jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.</p>
+
+<h3 id="how-it-works">How it works</h3>
+
+<p>When you run Jekyll through Bundler three things are done.</p>
+
+<ol>
+  <li>Jekyll runs through all the files in the repository and generates static web pages from them.  It puts these pages in the <code class="highlighter-rouge">_site/</code> folder.</li>
+  <li>A wee web server is run to serve those pages to your web browser.</li>
+  <li>Jekyll watches for file changes.  Every time a page is saved, Jekyll will rebuild ALL the pages in the <code class="highlighter-rouge">_site/</code> folder.  This will take a while - at least the same length of time the initial build took.  Please also note, Jekyll only watches files that it knows about.  If you create a new page then Jekyll will not updated itself automatically and will need to be restarted.</li>
+</ol>
+
+<p>You don’t have to use the web server to access the pages.  You can open them in your browser directly and they should work as intended.</p>
+
+<h3 id="watch-errors">Watch Errors</h3>
+
+<p>On Windows, when a file changes, the site folder isn’t rebuilt due to a problem with the GitHub gem (a GitHub Metadata error is produced).  At the moment this has been solved with the following environment variable set in _config.yml:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>github: [metadata]
+</code></pre>
+</div>
+
+<p>I do not know yet if this has any unitended consequences elsewhere.</p>
 
 
     <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        
+        
         
     </div>
 

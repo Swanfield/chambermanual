@@ -32,6 +32,14 @@ entries:
       url: /theme_index.html
       output: web, pdf
 
+    - title: Using Git
+      url: /theme_using_git.html
+      output: web, pdf
+
+    - title: Command Line Shortcuts
+      url: /theme_command_line_shortcuts.html
+      output: web, pdf
+
     - title: Editing an Existing Manual
       url: /theme_existing_pages.html
       output: web, pdf
