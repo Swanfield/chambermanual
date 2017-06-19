@@ -853,6 +853,16 @@ choco install github
 </div>
 <p>I have not used <a href="https://desktop.github.com/">GitHub Desktop</a>, and have not been able to install it with chocolatey, so will not document it here until I have.</p>
 
+<h2 id="set-up-tortoisegit">Set up TortoiseGit</h2>
+
+<p>In windows explorer, right click in the empty sapce in the folder view (on the right hand side).  Go to the TortoiseGit option, then select settings at the bottom of the new pop-up menu.  Select Network on the left hand side of the settings window that appears.  Now you need to set the ssh client in the box on the bottom right to:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>C:\Program Files\Git\usr\bin\ssh.exe
+</code></pre>
+</div>
+
+<p>This ensures that TortoiseGit pushes and pulls with the same settings as the command line.</p>
+
 <h2 id="set-up-git">Set up Git</h2>
 
 <p>You will need to synchronise your newly installed version of git with GitHub.  I have not used [GitHub Desktop] so will not document it here until I have.  [TortoiseGit] uses the same settings as [Git for Windows].  You can think of it simply as a Windows Explorer add-on for Git.  I will focus on [Git for Windows] as I am most familiar with this but if you really like using your mouse and Windows Explorer then pretty much anything that can be done on the command line with [Git for Windows] can be done with [TortoiseGit].</p>
@@ -1102,16 +1112,6 @@ ls -la
     <p>or you can view it’s contents in the normal way with windows explorer.</p>
   </li>
 </ol>
-
-<h2 id="set-up-tortoisegit">Set up TortoiseGit</h2>
-
-<p>In windows explorer, right click on the folder for your repository.  Go to the TortoiseGit option, then select settings at the bottom of the new pop-up menu.  Select Network on the left hand side of the settings window that appears.  Now you need to set the ssh client in the box on the bottom right to:</p>
-
-<p>’’’
-C:\Program Files\Git\usr\bin\ssh.exe
-‘’’</p>
-
-<p>This ensures that TortoiseGit pushes and pulls with the same settings as the command line.</p>
 
 <h3 id="branches">Branches</h3>
 

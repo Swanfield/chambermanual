@@ -101,6 +101,18 @@ choco install github
 I have not used [GitHub Desktop](https://desktop.github.com/), and have not been able to install it with chocolatey, so will not document it here until I have.
 
 
+## Set up TortoiseGit
+
+In windows explorer, right click in the empty sapce in the folder view (on the right hand side).  Go to the TortoiseGit option, then select settings at the bottom of the new pop-up menu.  Select Network on the left hand side of the settings window that appears.  Now you need to set the ssh client in the box on the bottom right to:
+
+```
+C:\Program Files\Git\usr\bin\ssh.exe
+```
+
+This ensures that TortoiseGit pushes and pulls with the same settings as the command line.
+
+
+
 
 ## Set up Git
 
@@ -325,17 +337,6 @@ ls -la
     ```
 
     or you can view it's contents in the normal way with windows explorer.
-
-
-## Set up TortoiseGit
-
-In windows explorer, right click on the folder for your repository.  Go to the TortoiseGit option, then select settings at the bottom of the new pop-up menu.  Select Network on the left hand side of the settings window that appears.  Now you need to set the ssh client in the box on the bottom right to:
-
-'''
-C:\Program Files\Git\usr\bin\ssh.exe
-'''
-
-This ensures that TortoiseGit pushes and pulls with the same settings as the command line.
 
 
 
