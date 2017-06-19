@@ -1103,6 +1103,16 @@ ls -la
   </li>
 </ol>
 
+<h2 id="set-up-tortoisegit">Set up TortoiseGit</h2>
+
+<p>In windows explorer, right click on the folder for your repository.  Go to the TortoiseGit option, then select settings at the bottom of the new pop-up menu.  Select Network on the left hand side of the settings window that appears.  Now you need to set the ssh client in the box on the bottom right to:</p>
+
+<p>’’’
+C:\Program Files\Git\usr\bin\ssh.exe
+‘’’</p>
+
+<p>This ensures that TortoiseGit pushes and pulls with the same settings as the command line.</p>
+
 <h3 id="branches">Branches</h3>
 
 <p>You will see that there isn’t much there initially.  That is because you are looking at the master branch and we aren’t using it for much at the moment.  The documentation files are all in a special branch, called gh-pages, used specifically by GitHub Pages.</p>
@@ -1196,7 +1206,7 @@ git checkout master
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2017 MS Therapy Centre Lothian. All rights reserved. <br />
- Site last generated: Jun 13, 2017 <br />
+ Site last generated: Jun 19, 2017 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

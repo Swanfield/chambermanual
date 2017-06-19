@@ -326,6 +326,19 @@ ls -la
 
     or you can view it's contents in the normal way with windows explorer.
 
+
+## Set up TortoiseGit
+
+In windows explorer, right click on the folder for your repository.  Go to the TortoiseGit option, then select settings at the bottom of the new pop-up menu.  Select Network on the left hand side of the settings window that appears.  Now you need to set the ssh client in the box on the bottom right to:
+
+'''
+C:\Program Files\Git\usr\bin\ssh.exe
+'''
+
+This ensures that TortoiseGit pushes and pulls with the same settings as the command line.
+
+
+
 ### Branches
 
 You will see that there isn't much there initially.  That is because you are looking at the master branch and we aren't using it for much at the moment.  The documentation files are all in a special branch, called gh-pages, used specifically by GitHub Pages.
