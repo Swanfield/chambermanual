@@ -1134,11 +1134,11 @@
 
 
 {
-"title": "Command Line Shortcuts for Git Bash",
-"tags": "",
-"keywords": "",
-"url": "pagesthemetheme_command_line_shortcuts.html",
-"summary": ""
+"title": "Command Line Shortcuts",
+"tags": "shortcutscommand_line",
+"keywords": "Command Line Shortcuts",
+"url": "theme_command_line_shortcuts.html",
+"summary": "Shortcuts for use on the command line."
 }
 ,
 
@@ -1190,7 +1190,7 @@
 
 {
 "title": "Editing an Existing Manual",
-"tags": "new_pages",
+"tags": "editing",
 "keywords": "editing",
 "url": "theme_existing_pages.html",
 "summary": "How to start editing an existing manual."

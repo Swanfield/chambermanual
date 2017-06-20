@@ -1,7 +1,7 @@
 ---
 title: Editing an Existing Manual
 keywords: editing
-tags: [new_pages]
+tags: [editing]
 sidebar: theme_sidebar
 permalink: theme_existing_pages.html
 folder: theme
@@ -20,12 +20,12 @@ When working with other people on the same repository then it is best to have a 
 
 1. Pull the changes other people have made (or you have made on other machines),
 1. Make your changes,
-1. Commit your changes regularily and frequently with helpful commit messages.
-1. Push your commits regularily (the frequency depends on how your team works).
+1. Commit your changes regularly and frequently with helpful commit messages.
+1. Push your commits regularly (the frequency depends on how your team works).
 
 With this particular project you don't want to push changes too many times per day because Github will only update your Github Pages website a few times per day and each push will cause a website update.
 
-More complicated projects are managed slightly differently.  Ideally everyone would commit and push their work regularily and frequently.  However, they would work on their own branches until their work was ready for integration (merging) with the master branch.  This way, the most important master branch would remain stable at all times and wouldn't be subjected directly to frequent or potentially dodgy commits.
+More complicated projects are managed slightly differently.  Ideally everyone would commit and push their work regularly and frequently.  However, they would work on their own branches until their work was ready for integration (merging) with the master branch.  This way, the most important master branch would remain stable at all times and wouldn't be subjected directly to frequent or potentially dodgy commits.
 
 ## Update Repository
 
@@ -78,7 +78,7 @@ You can:
 You can preview your changes before you commit them by running:
 
 ```
-bundle exec jekyll serve
+bundle exec Jekyll serve
 ```
 
 in the repository's root directory (manuals).  This command creates a local copy of the website AND runs a wee web server.  You can view the site here:
@@ -87,7 +87,7 @@ in the repository's root directory (manuals).  This command creates a local copy
 
 ### Commit Changes
 
-If you are happy with your work, you need to add it to your upcomming commit.  The following command will add all edits AND new files.
+If you are happy with your work, you need to add it to your up coming commit.  The following command will add all edits AND new files.
 
 ```
 git add .

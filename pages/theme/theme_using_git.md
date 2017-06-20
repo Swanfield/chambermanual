@@ -125,15 +125,15 @@ bundle exec jekyll serve
 
 **NB** If this doesn't work then you probably haven't installed the Ruby Development Kit correctly which prevents "bundle install" from installing all the required gems.
 
-As this is pretty long, we will create a short alias, called "jserve" for this command later.
+As this is pretty long, we will create a short alias, called "serve" for this command later.
 
 You will now be able to view your documentation at:
 
 [http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 
-If you are using an editor that allows you to preview Markdown files then you will see between this theme and Jekyll (the application GitHub and Bundler use to generate the webpages), your changes might not appear exactly as you had expected.
+If you are using an editor that allows you to preview Markdown files then you will see between this theme and Jekyll (the application GitHub and Bundler use to generate the web pages), your changes might not appear exactly as you had expected.
 
-If you need to make changes then you will need to stop the jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.
+If you need to make changes then you will need to stop the Jekyll server (ctrl+c) and restart it.  Restarting is easy though (although it will take about a minute or so).  All you need to do is press the cursor up key and your last command will appear in the Git Bash window, then hit enter to execute it.
 
 
 ### How it works
@@ -154,4 +154,4 @@ On Windows, when a file changes, the site folder isn't rebuilt due to a problem 
 github: [metadata]
 ```
 
-I do not know yet if this has any unitended consequences elsewhere.
+I do not know yet if this has any unintended consequences elsewhere.

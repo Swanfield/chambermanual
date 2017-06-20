@@ -1,7 +1,7 @@
 ---
 title: Command Line Shortcuts
 keywords: Command Line Shortcuts
-tags: [shortcuts][command line]
+tags: [shortcuts, command_line]
 sidebar: theme_sidebar
 permalink: theme_command_line_shortcuts.html
 folder: theme
@@ -45,6 +45,7 @@ alias gs='git status'
 alias gc='git commit -m' # Commit with "message enclosed in quotes"
 alias pull='git pull'
 alias push='git push'
+alias stash='git stash'
 alias serve='bundle exec jekyll serve'
 alias build='bundle exec jekyll build'
 ```
