@@ -74,6 +74,7 @@ In the base of each filter bowl is mounted an Air Auto Drain, this little unit w
 
 To get the best from your filters, ensure that the filters are large in size* this will guarantee maximum air movement and long life.
 
+
 ### The life of yourfilters:-
 
  Pre-filter element, This element will last quite a long time as the air flow through the Mesh is unrestricted, so it could last several years.
